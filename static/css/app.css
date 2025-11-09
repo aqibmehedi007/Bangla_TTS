@@ -259,17 +259,22 @@ body {
     justify-content: space-between;
 }
 
-.voice-card__gender {
-    font-size: 1.2rem;
-    line-height: 1;
-    color: var(--primary-dark);
-}
-
 .voice-card__title {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.voice-card__name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.voice-card__gender {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
 }
 
 .voice-card__id {
@@ -369,7 +374,7 @@ body {
 }
 
 .voice-gender-icon {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--primary-dark);
 }
 

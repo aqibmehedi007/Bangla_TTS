@@ -63,7 +63,7 @@
                                 <div class="config-tile__label">Voice details</div>
                                 <div class="voice-details">
                                     <div class="voice-details__name">
-                                        <i id="detailVoiceGender" class="voice-gender-icon fa-solid fa-venus"></i>
+                                        <i id="detailVoiceGender" class="voice-gender-icon fa-solid fa-person-dress"></i>
                                         <strong id="detailVoiceName">Heart</strong>
                                     </div>
                                     <div class="voice-details__meta"><span id="detailVoiceId">af_heart</span> · <span id="detailVoiceLang">American English</span></div>
@@ -167,9 +167,11 @@
     <template id="voiceCardTemplate">
         <div class="voice-card" data-voice>
             <div class="voice-card__header">
-                <i class="voice-card__gender fa-solid fa-venus" data-voice-gender></i>
-                <div class="voice-card__title">
-                    <strong data-voice-name></strong>
+                 <div class="voice-card__title">
+                    <div class="voice-card__name">
+                        <i class="voice-card__gender fa-solid fa-person-dress" data-voice-gender></i>
+                        <strong data-voice-name></strong>
+                    </div>
                     <span class="voice-card__id" data-voice-id></span>
                 </div>
                 <span class="voice-card__grade" data-voice-grade></span>

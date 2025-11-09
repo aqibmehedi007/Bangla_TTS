@@ -30,9 +30,9 @@ const App = (() => {
     const formatters = {
         grade: (grade) => grade ? `Grade ${grade}` : 'Ungraded',
         genderClass: (gender) => {
-            if (gender === 'male') return 'fa-mars';
-            if (gender === 'female') return 'fa-venus';
-            return 'fa-genderless';
+            if (gender === 'male') return 'fa-person';
+            if (gender === 'female') return 'fa-person-dress';
+            return 'fa-person-half-dress';
         },
     };
 
