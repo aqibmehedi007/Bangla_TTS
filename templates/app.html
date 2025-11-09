@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokoro TTS Control Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar__inner">
+            <div class="brand">
+                <div class="brand__icon">🎧</div>
+                <div class="brand__title">Kokoro TTS Control Room</div>
+            </div>
+            <nav class="main-nav">
+                <button class="main-nav__button active" data-nav="single">Single</button>
+                <button class="main-nav__button" data-nav="batch">Batch</button>
+                <button class="main-nav__button" data-nav="voices">Voice Library</button>
+                <button class="main-nav__button" data-nav="settings">Settings</button>
+            </nav>
+            <div id="modelStatusPill" class="status-pill">
+                <span class="status-pill__dot"></span>
+                <span class="status-pill__text">Loading model status…</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <section id="view-single" class="view view--active">
+            <div class="view__grid">
+                <aside class="panel">
+                    <h3 class="panel__title">Voice explorer</h3>
+                    <div class="filters">
+                        <label class="filter">
+                            <span class="filter__label">Language</span>
+                            <select id="languageSelect" class="filter__select"></select>
+                        </label>
+                        <div class="segmented" id="genderFilter">
+                            <button class="segmented__button active" data-gender="all">All</button>
+                            <button class="segmented__button" data-gender="female">Female</button>
+                            <button class="segmented__button" data-gender="male">Male</button>
+                        </div>
+                    </div>
+                    <div id="voiceList" class="voice-list"></div>
+                </aside>
+
+                <div class="workspace">
+                    <section class="card">
+                        <h3 class="panel__title">Configuration</h3>
+                        <div class="config-grid">
+                            <div class="config-tile">
+                                <div class="config-tile__label">Speed</div>
+                                <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1" class="config-tile__slider">
+                                <div id="speedValue" class="config-tile__value">1.0×</div>
+                            </div>
+                            <div class="config-tile">
+                                <div class="config-tile__label">Temperature</div>
+                                <div class="config-tile__placeholder">Reserved for future stochastic controls</div>
+                            </div>
+                            <div class="config-tile config-tile--wide" id="voiceDetails">
+                                <div class="config-tile__label">Voice details</div>
+                                <div class="voice-details">
+                                    <div><strong id="detailVoiceId">af_heart</strong> · <span id="detailVoiceLang">American English</span></div>
+                                    <div id="detailVoiceMeta" class="voice-details__meta"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <h3 class="panel__title">Script</h3>
+                        <textarea id="singleText" class="script-input" placeholder="Paste or write your script here..."></textarea>
+                        <div class="script-meta">
+                            <span id="charCount">0 characters</span>
+                            <span>Use markdown for emphasis.</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn--secondary" id="previewBtn" disabled>Preview Segment</button>
+                            <button class="btn" id="generateBtn">Generate Speech</button>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <h3 class="panel__title">Output</h3>
+                        <div id="outputPlaceholder" class="output-placeholder">Generated audio will appear here.</div>
+                        <div id="outputArea" class="output-area hidden">
+                            <div class="output-waveform" id="waveformPlaceholder"></div>
+                            <audio id="singleAudio" controls class="output-audio" preload="none"></audio>
+                            <div class="output-meta" id="outputMeta"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-batch" class="view">
+            <div class="card">
+                <h3 class="panel__title">Batch production</h3>
+                <div class="stepper">
+                    <div class="stepper__step stepper__step--active">1. Prepare</div>
+                    <div class="stepper__step">2. Review</div>
+                    <div class="stepper__step">3. Monitor</div>
+                </div>
+                <div class="batch-toolbar">
+                    <button class="btn btn--secondary" id="addRowBtn">Add Row</button>
+                    <button class="btn btn--secondary" id="loadSampleBtn">Load Sample Data</button>
+                    <div class="batch-toolbar__spacer"></div>
+                    <button class="btn" id="runBatchBtn">Generate Batch</button>
+                </div>
+                <div class="table-wrapper">
+                    <table class="batch-table">
+                        <thead>
+                            <tr>
+                                <th class="col-text">Text</th>
+                                <th>Language</th>
+                                <th>Voice</th>
+                                <th>Speed</th>
+                                <th>Status</th>
+                                <th>Output</th>
+                            </tr>
+                        </thead>
+                        <tbody id="batchTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="queue-grid">
+                <aside class="summary card" id="batchSummary"></aside>
+                <div class="job-stream" id="jobStream"></div>
+            </div>
+        </section>
+
+        <section id="view-voices" class="view">
+            <div class="card">
+                <div class="library-header">
+                    <div>
+                        <h3 class="panel__title">Voice library</h3>
+                        <p class="panel__subtitle">Explore all available Kokoro voices.</p>
+                    </div>
+                    <input id="voiceSearch" class="filter__input" type="search" placeholder="Search voices…">
+                </div>
+                <div id="voiceLibraryList" class="voice-library"></div>
+            </div>
+        </section>
+
+        <section id="view-settings" class="view">
+            <div class="card">
+                <h3 class="panel__title">Environment</h3>
+                <pre class="settings-pre" id="settingsInfo"></pre>
+            </div>
+            <div class="card">
+                <h3 class="panel__title">Quick tips</h3>
+                <ul class="tips-list">
+                    <li>Select `af_heart` or `af_bella` for high-quality English narration.</li>
+                    <li>Speed values outside 0.7×–1.3× may sound rushed or stretched.</li>
+                    <li>Batch mode processes jobs sequentially in this prototype.</li>
+                    <li>Temperature control is planned once stochastic decoding is exposed upstream.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <template id="voiceCardTemplate">
+        <div class="voice-card" data-voice>
+            <div class="voice-card__header">
+                <strong data-voice-id></strong>
+                <span class="voice-card__grade" data-voice-grade></span>
+            </div>
+            <div class="voice-card__meta" data-voice-meta></div>
+            <button class="voice-card__select">Select</button>
+        </div>
+    </template>
+
+    <template id="jobCardTemplate">
+        <div class="job-card">
+            <div class="job-card__header">
+                <strong data-job-title></strong>
+                <span data-job-status></span>
+            </div>
+            <div class="job-card__progress" data-job-progress></div>
+            <div class="job-card__actions" data-job-actions></div>
+        </div>
+    </template>
+
+    <script>
+        window.__VOICE_DATA__ = {{ voices | tojson }};
+        window.__LANGUAGE_OPTIONS__ = {{ languages | tojson }};
+        window.__MODEL_INFO__ = {{ model_info | tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</body>
+</html>

@@ -3,253 +3,214 @@ Kokoro TTS Service for QuteVoice
 Based on the working implementation from RAG_Simplified project
 """
 
-import asyncio
 import io
 import logging
-import tempfile
-import os
-import torch
-import soundfile as sf
-import numpy as np
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, Any
 from pathlib import Path
+
+import numpy as np
+import soundfile as sf
+import torch
 
 logger = logging.getLogger(__name__)
 
+VOICE_LANG_MAP = {
+    "a": "American English",
+    "b": "British English",
+    "e": "Spanish",
+    "f": "French",
+    "h": "Hindi",
+    "i": "Italian",
+    "j": "Japanese",
+    "p": "Brazilian Portuguese",
+    "z": "Mandarin Chinese",
+}
+
+
 class KokoroTTSService:
     """Text-to-Speech service using Kokoro model"""
-    
-    def __init__(self, model_path: str = "./models/Kokoro_espeak_Q8.gguf"):
-        """
-        Initialize Kokoro TTS service
-        
-        Args:
-            model_path: Path to the Kokoro model file
-        """
+
+    def __init__(self, model_path: str = "./models/Kokoro_espeak_Q4.gguf"):
         self.model_path = Path(model_path)
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.pipeline = None
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.initialized = False
-        
-        # Voice configuration
-        self.default_voice = "af_heart"  # High-quality female voice
-        self.available_voices = [
-            "af_heart", "en_heart", "es_heart", "fr_heart", 
-            "de_heart", "it_heart", "pt_heart", "ru_heart"
-        ]
-        
-        # Audio settings
+        self.pipelines: Dict[str, Any] = {}
+        self.model = None
+
+        # Default voice fallback
+        self.default_voice = "af_bella"
         self.sample_rate = 24000
-        self.audio_format = "wav"
-        
         logger.info(f"Kokoro TTS service initialized on device: {self.device}")
-    
+
     async def initialize(self) -> bool:
-        """
-        Initialize the Kokoro model pipeline
-        
-        Returns:
-            True if initialization successful, False otherwise
-        """
-        try:
-            if self.initialized:
-                return True
-                
-            logger.info("Initializing Kokoro TTS model...")
-            
-            # Check if model exists
-            if not self.model_path.exists():
-                logger.error(f"Kokoro model not found at: {self.model_path}")
-                return False
-            
-            # Import kokoro library
-            try:
-                from kokoro import KPipeline
-            except ImportError:
-                logger.error("Kokoro library not installed. Please install with: pip install kokoro>=0.9.2")
-                return False
-            
-            # Initialize pipeline
-            self.pipeline = KPipeline(lang_code='a', device=self.device)
-            
-            # Test the pipeline with a simple phrase
-            test_text = "Hello, this is a test."
-            test_generator = self.pipeline(test_text, voice=self.default_voice)
-            
-            # Consume the generator to test
-            for _ in test_generator:
-                break  # Just test that it works
-            
-            self.initialized = True
-            logger.info("Kokoro TTS model initialized successfully")
+        """Flag service as ready; pipelines are created lazily per language."""
+        if self.initialized:
             return True
-            
-        except Exception as e:
-            logger.error(f"Failed to initialize Kokoro TTS: {e}")
+
+        if not self.model_path.exists():
+            logger.warning("Kokoro model file not found, will operate in demo/fallback mode")
             return False
-    
-    async def synthesize_speech(self, text: str, voice: Optional[str] = None) -> bytes:
-        """
-        Convert text to speech using Kokoro
-        
-        Args:
-            text: Text to convert to speech
-            voice: Voice to use (optional, defaults to self.default_voice)
-            
-        Returns:
-            Audio data as bytes (WAV format)
-        """
+
+        try:
+            from kokoro import KModel  # noqa: F401
+        except ImportError:
+            logger.error("Kokoro library not installed. Please run: pip install kokoro")
+            return False
+
+        self.initialized = True
+        return True
+
+    async def _get_pipeline(self, lang_code: str):
+        """Create or reuse a KPipeline for the requested language."""
+        from kokoro import KPipeline
+
+        lang_code = (lang_code or "a").lower()
+        if lang_code not in VOICE_LANG_MAP:
+            lang_code = "a"
+
+        if lang_code in self.pipelines:
+            return self.pipelines[lang_code]
+
+        logger.info(f"Creating Kokoro pipeline for language '{lang_code}' on device {self.device}")
+        pipeline = KPipeline(lang_code=lang_code, device=self.device)
+        self.pipelines[lang_code] = pipeline
+        return pipeline
+
+    def _extract_lang_from_voice(self, voice: Optional[str], explicit_lang: Optional[str]) -> str:
+        if explicit_lang and explicit_lang.lower() in VOICE_LANG_MAP:
+            return explicit_lang.lower()
+        if voice:
+            prefix = voice.strip().split(",")[0]
+            if prefix:
+                lang_code = prefix[0].lower()
+                if lang_code in VOICE_LANG_MAP:
+                    return lang_code
+        return "a"
+
+    async def synthesize_speech(self, text: str, voice: Optional[str] = None, speed: float = 1.0,
+                                language: Optional[str] = None) -> bytes:
         if not text or not text.strip():
             logger.warning("Empty text provided for TTS")
             return b""
-        
-        # Ensure model is initialized
-        if not self.initialized:
-            if not await self.initialize():
-                raise Exception("Failed to initialize Kokoro TTS model")
-        
-        # Use provided voice or default
-        selected_voice = voice or self.default_voice
-        
-        # Validate voice
-        if selected_voice not in self.available_voices:
-            logger.warning(f"Voice '{selected_voice}' not available, using default")
-            selected_voice = self.default_voice
-        
+
+        if not self.initialized and not await self.initialize():
+            raise RuntimeError("Kokoro service failed to initialize")
+
+        voice_id = voice or self.default_voice
+        lang_code = self._extract_lang_from_voice(voice_id, language)
+
         try:
-            logger.info(f"Synthesizing speech for {len(text)} characters using voice: {selected_voice}")
-            
-            # Generate speech using Kokoro
-            generator = self.pipeline(text, voice=selected_voice)
-            
-            # Collect audio data
+            pipeline = await self._get_pipeline(lang_code)
+        except Exception as exc:
+            logger.error(f"Could not create Kokoro pipeline: {exc}")
+            raise RuntimeError("Pipeline creation failed") from exc
+
+        # Ensure requested voice can be loaded; fall back if necessary
+        try:
+            pipeline.load_voice(voice_id)
+        except Exception as exc:
+            logger.warning(
+                "Voice '%s' unavailable (%s). Falling back to '%s'.",
+                voice_id, exc, self.default_voice
+            )
+            voice_id = self.default_voice
+            try:
+                pipeline.load_voice(voice_id)
+            except Exception as inner_exc:
+                logger.error("Fallback voice '%s' also failed: %s", voice_id, inner_exc)
+                raise RuntimeError(f"Unable to load voice '{voice}'") from inner_exc
+
+        try:
+            logger.info(
+                "Synthesizing speech (%s chars) voice=%s lang=%s speed=%s",
+                len(text), voice_id, lang_code, speed,
+            )
             audio_segments = []
-            for i, (gs, ps, audio) in enumerate(generator):
+            for result in pipeline(text, voice=voice_id, speed=float(speed)):
+                audio = getattr(result, "audio", None)
                 if audio is not None and len(audio) > 0:
                     audio_segments.append(audio)
-            
+
             if not audio_segments:
-                logger.error("No audio generated from Kokoro")
+                logger.error("No audio produced by Kokoro for voice %s", voice_id)
                 return b""
-            
-            # Concatenate audio segments
-            full_audio = np.concatenate(audio_segments)
-            
-            # Convert to bytes
+
+            full_audio = np.concatenate([segment.numpy() if hasattr(segment, "numpy") else segment
+                                          for segment in audio_segments])
             audio_bytes = io.BytesIO()
-            sf.write(audio_bytes, full_audio, self.sample_rate, format='WAV')
-            audio_data = audio_bytes.getvalue()
-            
-            logger.info(f"TTS synthesis completed. Generated {len(audio_data)} bytes of audio")
-            return audio_data
-            
-        except Exception as e:
-            logger.error(f"Kokoro TTS synthesis failed: {e}")
-            raise Exception(f"Speech synthesis failed: {str(e)}")
-    
-    def get_available_voices(self) -> Dict[str, Any]:
-        """
-        Get list of available voices
-        
-        Returns:
-            Dictionary with voice information
-        """
-        try:
-            voice_categories = {
-                "premium_female": [],
-                "premium_male": [],
-                "multilingual": [],
-                "other_female": [],
-                "other_male": [],
-            }
-            
-            # Kokoro voices are primarily female with high quality
-            for voice in self.available_voices:
-                voice_info = {
-                    "name": voice,
-                    "display_name": voice.replace("_", " ").title(),
-                    "locale": "en-US",
-                    "gender": "female",
-                    "quality": "premium"
-                }
-                
-                # Categorize voices
-                if voice in ["af_heart", "en_heart"]:
-                    voice_categories["premium_female"].append(voice_info)
-                elif voice in ["es_heart", "fr_heart", "de_heart", "it_heart", "pt_heart", "ru_heart"]:
-                    voice_categories["multilingual"].append(voice_info)
-                else:
-                    voice_categories["premium_female"].append(voice_info)
-            
-            return voice_categories
-            
-        except Exception as e:
-            logger.error(f"Failed to get available voices: {str(e)}")
-            return {"premium_female": [], "premium_male": [], "multilingual": [], "other_female": [], "other_male": []}
-    
+            sf.write(audio_bytes, full_audio, self.sample_rate, format="WAV")
+            return audio_bytes.getvalue()
+        except Exception as exc:
+            logger.exception("Kokoro synthesis failed: %s", exc)
+            raise RuntimeError(str(exc))
+
     def get_model_info(self) -> Dict[str, Any]:
-        """
-        Get information about the Kokoro model
-        
-        Returns:
-            Dictionary with model information
-        """
         return {
-            "model_name": "Kokoro TTS",
+            "model_name": "Kokoro TTS" if self.initialized else "Kokoro TTS (uninitialized)",
             "model_file": str(self.model_path),
-            "device": str(self.device),
+            "device": self.device,
             "sample_rate": self.sample_rate,
             "initialized": self.initialized,
-            "available_voices": len(self.available_voices)
         }
-    
+
     def is_available(self) -> bool:
-        """
-        Check if the TTS service is available
-        
-        Returns:
-            True if service is available, False otherwise
-        """
-        return self.initialized and self.pipeline is not None
-    
+        return self.initialized
+
     def unload_model(self) -> bool:
-        """
-        Unload the Kokoro model from memory
-        
-        Returns:
-            True if model was unloaded successfully, False otherwise
-        """
         try:
-            if not self.initialized or not self.pipeline:
-                logger.info("No model to unload")
-                return True
-            
-            logger.info("Unloading Kokoro TTS model from memory...")
-            
-            # Clear pipeline reference
-            self.pipeline = None
+            self.pipelines.clear()
             self.initialized = False
-            
-            # Force garbage collection
-            import gc
-            for _ in range(3):
-                gc.collect()
-            
-            # Clear GPU cache if available
-            try:
-                if torch.cuda.is_available():
-                    torch.cuda.empty_cache()
-                    torch.cuda.synchronize()
-                    logger.info("GPU cache cleared")
-            except Exception as e:
-                logger.warning(f"Could not clear GPU cache: {e}")
-            
-            logger.info("Kokoro TTS model unloaded successfully")
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
             return True
-            
-        except Exception as e:
-            logger.error(f"Error unloading Kokoro model: {e}")
+        except Exception as exc:
+            logger.error("Failed to unload Kokoro model: %s", exc)
             return False
 
-# Global Kokoro TTS service instance
-kokoro_tts_service = KokoroTTSService()
+
+def generate_demo_tone(text: str, sample_rate: int = 24000) -> bytes:
+    import math
+
+    duration = max(1.5, min(12.0, len(text) * 0.08))
+    t = np.linspace(0, duration, int(sample_rate * duration))
+    base_freq = 440 + (hash(text) % 160)
+    waveform = 0.3 * np.sin(2 * math.pi * base_freq * t)
+    envelope = np.exp(-t * 1.8) * (1 - np.exp(-t * 6))
+    audio = waveform * envelope
+    audio_bytes = io.BytesIO()
+    sf.write(audio_bytes, audio, sample_rate, format="WAV")
+    return audio_bytes.getvalue()
+
+
+class DemoTTSService:
+    """Demo TTS service for when Kokoro is not available"""
+
+    def __init__(self):
+        self.device = "cpu"
+        self.initialized = True
+        self.sample_rate = 24000
+        self.available_voices = [
+            "af_heart", "af_bella", "am_onyx", "bf_emma", "zf_xiaoxiao",
+        ]
+        self.default_voice = "af_heart"
+        logger.info("🎭 Demo TTS service initialized")
+
+    async def initialize(self):
+        return True
+
+    def is_available(self):
+        return True
+
+    async def synthesize_speech(self, text: str, voice: Optional[str] = None,
+                                speed: float = 1.0, language: Optional[str] = None) -> bytes:
+        return generate_demo_tone(text, self.sample_rate)
+
+    def get_model_info(self):
+        return {
+            "model_name": "Demo TTS",
+            "model_file": "demo_mode",
+            "device": self.device,
+            "sample_rate": self.sample_rate,
+            "initialized": True,
+            "available_voices": len(self.available_voices),
+        }

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokoro TTS Wireframe</title>
+    <style>
+        :root {
+            --bg: #f3f4f6;
+            --surface: #ffffff;
+            --surface-alt: #f8fafc;
+            --primary: #6366f1;
+            --primary-dark: #4338ca;
+            --accent: #10b981;
+            --border: #e5e7eb;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", "Segoe UI", sans-serif;
+            background: linear-gradient(180deg, rgba(99,102,241,0.12), rgba(45,55,72,0.05));
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            backdrop-filter: blur(12px);
+            background: rgba(15, 23, 42, 0.75);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
+        }
+
+        .topbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 28px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.04em;
+        }
+
+        .brand .spark {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: linear-gradient(130deg, var(--primary), var(--accent));
+            display: grid;
+            place-items: center;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        nav button {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.75);
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        nav button.active {
+            background: rgba(255, 255, 255, 0.16);
+            color: #fff;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(16, 185, 129, 0.14);
+            color: #e9faf3;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
+        }
+
+        .status-pill .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: #22d3a6;
+            box-shadow: 0 0 0 6px rgba(34, 211, 166, 0.35);
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 28px 64px;
+            display: grid;
+            gap: 24px;
+        }
+
+        .surface-card {
+            background: var(--surface);
+            border-radius: 22px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            gap: 24px;
+        }
+
+        .panel-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .voice-card {
+            background: var(--surface-alt);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .voice-card h4 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .voice-meta {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        .voice-meta span {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .voice-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 12px;
+            max-height: 420px;
+            overflow-y: auto;
+        }
+
+        .filters {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .filters select,
+        .filters .segmented {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px;
+            background: var(--surface);
+            font-size: 0.95rem;
+        }
+
+        .segmented {
+            display: flex;
+            gap: 6px;
+            padding: 6px;
+            background: var(--surface-alt);
+        }
+
+        .segmented button {
+            flex: 1;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 0;
+            background: transparent;
+            color: var(--muted);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .segmented button.active {
+            background: var(--surface);
+            color: var(--text);
+            box-shadow: inset 0 0 0 1px rgba(99,102,241,0.25);
+        }
+
+        .editor-card {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            gap: 16px;
+        }
+
+        .text-area {
+            background: var(--surface-alt);
+            border-radius: 18px;
+            border: 1px dashed rgba(99,102,241,0.35);
+            padding: 24px;
+            min-height: 220px;
+        }
+
+        .text-area p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .action-bar {
+            display: flex;
+            gap: 12px;
+        }
+
+        .action-bar button {
+            flex: 1;
+            border-radius: 12px;
+            border: none;
+            padding: 14px 18px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .action-primary {
+            background: linear-gradient(120deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            box-shadow: 0 8px 18px rgba(99, 102, 241, 0.25);
+        }
+
+        .action-secondary {
+            background: var(--surface-alt);
+            color: var(--muted);
+            border: 1px solid var(--border);
+        }
+
+        .output-card {
+            background: var(--surface-alt);
+            border-radius: 18px;
+            border: 1px solid rgba(99,102,241,0.18);
+            padding: 20px;
+        }
+
+        .output-card .placeholder-waveform {
+            height: 70px;
+            background: linear-gradient(90deg, rgba(99,102,241,0.25) 0%, rgba(14,165,233,0.35) 50%, rgba(99,102,241,0.25) 100%);
+            border-radius: 14px;
+            opacity: 0.45;
+        }
+
+        .output-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 16px;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .batch-section {
+            margin-top: 16px;
+        }
+
+        .stepper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .stepper div {
+            background: var(--surface-alt);
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: 14px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .stepper div.active {
+            border-color: rgba(99,102,241,0.45);
+            color: var(--primary);
+            box-shadow: 0 12px 25px rgba(99, 102, 241, 0.12);
+        }
+
+        .table-card {
+            margin-top: 22px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--surface);
+        }
+
+        thead {
+            background: var(--surface-alt);
+        }
+
+        th,
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+            font-size: 0.92rem;
+        }
+
+        tbody tr:nth-child(even) {
+            background: rgba(99,102,241,0.03);
+        }
+
+        .queue-panel {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+        }
+
+        .summary-card {
+            background: var(--surface-alt);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 18px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .job-card {
+            background: var(--surface);
+            border-radius: 16px;
+            border: 1px solid rgba(99,102,241,0.18);
+            padding: 18px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .job-grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(99,102,241,0.12);
+            overflow: hidden;
+        }
+
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(120deg, var(--primary), #38bdf8);
+            width: 65%;
+        }
+
+        .job-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .job-actions button {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--surface-alt);
+            color: var(--muted);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1024px) {
+            main {
+                margin: 24px auto;
+            }
+
+            .layout-grid,
+            .queue-panel {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .topbar {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .action-bar {
+                flex-direction: column;
+            }
+
+            .queue-panel {
+                gap: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <div class="brand">
+                <div class="spark">🎧</div>
+                Kokoro TTS Control Room
+            </div>
+            <nav>
+                <button class="active">Single</button>
+                <button>Batch</button>
+                <button>Voice Library</button>
+                <button>Settings</button>
+            </nav>
+            <span class="status-pill">
+                <span class="dot"></span>
+                Kokoro v1.0 · GPU ready
+            </span>
+        </div>
+    </header>
+
+    <main>
+        <section class="layout-grid surface-card">
+            <aside>
+                <h3 class="panel-title">Voice Explorer</h3>
+                <div class="filters">
+                    <select>
+                        <option>American English (a)</option>
+                        <option>British English (b)</option>
+                        <option>Japanese (j)</option>
+                        <option>Mandarin (z)</option>
+                    </select>
+                    <div class="segmented">
+                        <button class="active">All</button>
+                        <button>Female</button>
+                        <button>Male</button>
+                    </div>
+                </div>
+                <div class="voice-list">
+                    <div class="voice-card">
+                        <h4>af_heart</h4>
+                        <div class="voice-meta">
+                            <span>A Grade</span>
+                            <span>Female</span>
+                        </div>
+                        <p class="voice-meta">Premium expressive US voice.</p>
+                    </div>
+                    <div class="voice-card">
+                        <h4>af_bella</h4>
+                        <div class="voice-meta">
+                            <span>A- Grade</span>
+                            <span>Female</span>
+                        </div>
+                        <p class="voice-meta">Warm narration tone.</p>
+                    </div>
+                    <div class="voice-card">
+                        <h4>am_onyx</h4>
+                        <div class="voice-meta">
+                            <span>C Grade</span>
+                            <span>Male</span>
+                        </div>
+                        <p class="voice-meta">Casual conversational style.</p>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="editor-card">
+                <div>
+                    <h3 class="panel-title">Configuration</h3>
+                    <div class="filters" style="flex-direction: row; gap: 16px;">
+                        <div style="flex: 1;">
+                            <label class="panel-title" style="margin-bottom: 6px;">Speed</label>
+                            <div class="segmented" style="flex-direction: column; padding: 14px;">
+                                <div style="height: 6px; background: rgba(99,102,241,0.2); border-radius: 999px;">
+                                    <div style="height: 100%; width: 45%; background: linear-gradient(120deg, var(--primary), var(--primary-dark)); border-radius: 999px;"></div>
+                                </div>
+                                <span style="font-size: 0.85rem; color: var(--muted); text-align: center;">0.5× — 2.0× range</span>
+                            </div>
+                        </div>
+                        <div style="flex: 1;">
+                            <label class="panel-title" style="margin-bottom: 6px;">Temperature (upcoming)</label>
+                            <div style="border: 1px dashed rgba(107,114,128,0.45); border-radius: 12px; padding: 30px 12px; text-align: center; color: var(--muted);">
+                                Reserved for future randomness control
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-area">
+                    <p>Paste or write your script here...<br><br>Use markdown formatting for emphasis. Character limit guidance appears below.</p>
+                </div>
+
+                <div class="action-bar">
+                    <button class="action-secondary">Preview Segment</button>
+                    <button class="action-primary">Generate Speech</button>
+                </div>
+
+                <div class="output-card">
+                    <div class="placeholder-waveform"></div>
+                    <div class="output-meta">
+                        <span>Output: kokoro_single_001.wav</span>
+                        <span>Duration 00:52 · 24 kHz WAV</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="surface-card batch-section">
+            <h3 class="panel-title">Batch Production</h3>
+            <div class="stepper">
+                <div class="active">1. Prepare content</div>
+                <div>2. Review settings</div>
+                <div>3. Monitor queue</div>
+            </div>
+
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Text</th>
+                            <th>Language</th>
+                            <th>Voice</th>
+                            <th>Speed</th>
+                            <th>Status</th>
+                            <th>Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Welcome to the Kokoro TTS demo...</td>
+                            <td>a</td>
+                            <td>af_heart</td>
+                            <td>1.0</td>
+                            <td>Queued</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>Bonjour et merci de votre attention...</td>
+                            <td>f</td>
+                            <td>ff_siwis</td>
+                            <td>0.9</td>
+                            <td>Processing</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>こんにちは、本日のハイライトです...</td>
+                            <td>j</td>
+                            <td>jf_tebukuro</td>
+                            <td>1.1</td>
+                            <td>Completed</td>
+                            <td>Download</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="queue-panel">
+                <div class="summary-card">
+                    <div class="summary-line"><span>Total items</span><strong>12</strong></div>
+                    <div class="summary-line"><span>Queued</span><strong>4</strong></div>
+                    <div class="summary-line"><span>Processing</span><strong>3</strong></div>
+                    <div class="summary-line"><span>Completed</span><strong>5</strong></div>
+                    <div style="margin-top: 12px;">
+                        <button style="width: 100%; padding: 12px; border-radius: 10px; border: none; background: linear-gradient(120deg, var(--primary), var(--primary-dark)); color: #fff; font-weight: 600;">Download All</button>
+                    </div>
+                </div>
+
+                <div class="job-grid">
+                    <div class="job-card">
+                        <strong>#05 · processing</strong>
+                        <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Paragraph 2 — af_heart — 00:41 remaining</p>
+                        <div class="progress-bar"><span style="width: 68%;"></span></div>
+                        <div class="job-actions">
+                            <button>Pause</button>
+                            <button>Logs</button>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <strong>#04 · complete</strong>
+                        <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Mandarin briefing — zf_xiaoyi — 01:12</p>
+                        <div style="display: flex; gap: 10px;">
+                            <button style="flex: 1; border-radius: 10px; border: none; background: rgba(16,185,129,0.12); color: #047857; font-weight: 600;">▶ Play</button>
+                            <button style="flex: 1; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-alt); color: var(--muted); font-weight: 600;">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
