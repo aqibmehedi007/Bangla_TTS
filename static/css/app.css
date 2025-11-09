@@ -273,8 +273,9 @@ body {
 }
 
 .voice-card__gender {
-    font-size: 1.1rem;
-    color: var(--primary-dark);
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
 }
 
 .voice-card__id {
@@ -374,8 +375,9 @@ body {
 }
 
 .voice-gender-icon {
-    font-size: 1.25rem;
-    color: var(--primary-dark);
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
 
 .voice-details__meta {

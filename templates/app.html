@@ -63,7 +63,7 @@
                                 <div class="config-tile__label">Voice details</div>
                                 <div class="voice-details">
                                     <div class="voice-details__name">
-                                        <i id="detailVoiceGender" class="voice-gender-icon fa-solid fa-person-dress"></i>
+                                        <img id="detailVoiceGender" class="voice-gender-icon" src="{{ url_for('static', filename='assets/female.png') }}" alt="female">
                                         <strong id="detailVoiceName">Heart</strong>
                                     </div>
                                     <div class="voice-details__meta"><span id="detailVoiceId">af_heart</span> · <span id="detailVoiceLang">American English</span></div>
@@ -169,7 +169,7 @@
             <div class="voice-card__header">
                  <div class="voice-card__title">
                     <div class="voice-card__name">
-                        <i class="voice-card__gender fa-solid fa-person-dress" data-voice-gender></i>
+                        <img class="voice-card__gender" data-voice-gender src="{{ url_for('static', filename='assets/female.png') }}" alt="gender icon">
                         <strong data-voice-name></strong>
                     </div>
                     <span class="voice-card__id" data-voice-id></span>
@@ -192,7 +192,16 @@
     </template>
 
     <script id="bootstrap-data" type="application/json">
-        {{ {"voices": voices, "languages": languages, "model_info": model_info} | tojson | safe }}
+        {{ {
+            "voices": voices,
+            "languages": languages,
+            "model_info": model_info,
+            "icon_urls": {
+                "male": url_for('static', filename='assets/male.png'),
+                "female": url_for('static', filename='assets/female.png'),
+                "other": url_for('static', filename='assets/female.png')
+            }
+        } | tojson | safe }}
     </script>
     <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
 </body>

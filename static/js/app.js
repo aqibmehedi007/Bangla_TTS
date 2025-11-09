@@ -12,6 +12,7 @@ const App = (() => {
     const voices = Array.isArray(bootstrap.voices) ? bootstrap.voices : [];
     const languages = Array.isArray(bootstrap.languages) ? bootstrap.languages : [];
     const modelInfo = bootstrap.model_info || {};
+    const iconUrls = bootstrap.icon_urls || {};
 
     const elements = {};
     const state = {
@@ -29,10 +30,10 @@ const App = (() => {
 
     const formatters = {
         grade: (grade) => grade ? `Grade ${grade}` : 'Ungraded',
-        genderClass: (gender) => {
-            if (gender === 'male') return 'fa-person';
-            if (gender === 'female') return 'fa-person-dress';
-            return 'fa-person-half-dress';
+        genderIcon: (gender) => {
+            if (gender === 'male') return iconUrls.male || iconUrls.female;
+            if (gender === 'female') return iconUrls.female || iconUrls.male;
+            return iconUrls.other || iconUrls.female || iconUrls.male;
         },
     };
 
@@ -146,7 +147,8 @@ const App = (() => {
         if (isActive) card.classList.add('active');
         idEl.textContent = voice.id;
         nameEl.textContent = voice.display_name || voice.id;
-        genderEl.className = `voice-card__gender fa-solid ${formatters.genderClass(voice.gender)}`;
+        genderEl.src = formatters.genderIcon(voice.gender);
+        genderEl.alt = voice.gender || 'gender';
         gradeEl.textContent = voice.overall_grade || '—';
         selectBtn.addEventListener('click', () => setSelectedVoice(voice.id));
         card.addEventListener('click', (event) => {
@@ -200,7 +202,8 @@ const App = (() => {
             elements.voiceDetails.lang.textContent = voice.language_label;
         }
         if (elements.voiceDetails.gender) {
-            elements.voiceDetails.gender.className = `voice-gender-icon fa-solid ${formatters.genderClass(voice.gender)}`;
+            elements.voiceDetails.gender.src = formatters.genderIcon(voice.gender);
+            elements.voiceDetails.gender.alt = voice.gender || 'gender';
         }
     }
 
