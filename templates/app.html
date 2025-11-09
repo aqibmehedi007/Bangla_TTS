@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kokoro TTS Control Room</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
 </head>
 <body>
@@ -62,7 +63,7 @@
                                 <div class="config-tile__label">Voice details</div>
                                 <div class="voice-details">
                                     <div class="voice-details__name">
-                                        <span id="detailVoiceGender" class="voice-gender-icon">♀</span>
+                                        <i id="detailVoiceGender" class="voice-gender-icon fa-solid fa-venus"></i>
                                         <strong id="detailVoiceName">Heart</strong>
                                     </div>
                                     <div class="voice-details__meta"><span id="detailVoiceId">af_heart</span> · <span id="detailVoiceLang">American English</span></div>
@@ -166,7 +167,7 @@
     <template id="voiceCardTemplate">
         <div class="voice-card" data-voice>
             <div class="voice-card__header">
-                <span class="voice-card__gender" data-voice-gender>♀</span>
+                <i class="voice-card__gender fa-solid fa-venus" data-voice-gender></i>
                 <div class="voice-card__title">
                     <strong data-voice-name></strong>
                     <span class="voice-card__id" data-voice-id></span>
@@ -188,10 +189,8 @@
         </div>
     </template>
 
-    <script>
-        window.__VOICE_DATA__ = {{ voices | tojson }};
-        window.__LANGUAGE_OPTIONS__ = {{ languages | tojson }};
-        window.__MODEL_INFO__ = {{ model_info | tojson }};
+    <script id="bootstrap-data" type="application/json">
+        {{ {"voices": voices, "languages": languages, "model_info": model_info} | tojson | safe }}
     </script>
     <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
 </body>

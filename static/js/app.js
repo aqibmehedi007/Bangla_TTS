@@ -1,7 +1,17 @@
 const App = (() => {
-    const voices = Array.isArray(window.__VOICE_DATA__) ? window.__VOICE_DATA__ : [];
-    const languages = Array.isArray(window.__LANGUAGE_OPTIONS__) ? window.__LANGUAGE_OPTIONS__ : [];
-    const modelInfo = window.__MODEL_INFO__ || {};
+    let bootstrap = {};
+    const bootstrapEl = document.getElementById('bootstrap-data');
+    if (bootstrapEl) {
+        try {
+            bootstrap = JSON.parse(bootstrapEl.textContent);
+        } catch (err) {
+            console.error('Failed to parse bootstrap data', err);
+        }
+    }
+
+    const voices = Array.isArray(bootstrap.voices) ? bootstrap.voices : [];
+    const languages = Array.isArray(bootstrap.languages) ? bootstrap.languages : [];
+    const modelInfo = bootstrap.model_info || {};
 
     const elements = {};
     const state = {
@@ -19,10 +29,10 @@ const App = (() => {
 
     const formatters = {
         grade: (grade) => grade ? `Grade ${grade}` : 'Ungraded',
-        genderIcon: (gender) => {
-            if (gender === 'male') return '♂';
-            if (gender === 'female') return '♀';
-            return '∗';
+        genderClass: (gender) => {
+            if (gender === 'male') return 'fa-mars';
+            if (gender === 'female') return 'fa-venus';
+            return 'fa-genderless';
         },
     };
 
@@ -136,7 +146,7 @@ const App = (() => {
         if (isActive) card.classList.add('active');
         idEl.textContent = voice.id;
         nameEl.textContent = voice.display_name || voice.id;
-        genderEl.textContent = formatters.genderIcon(voice.gender);
+        genderEl.className = `voice-card__gender fa-solid ${formatters.genderClass(voice.gender)}`;
         gradeEl.textContent = voice.overall_grade || '—';
         selectBtn.addEventListener('click', () => setSelectedVoice(voice.id));
         card.addEventListener('click', (event) => {
@@ -190,7 +200,7 @@ const App = (() => {
             elements.voiceDetails.lang.textContent = voice.language_label;
         }
         if (elements.voiceDetails.gender) {
-            elements.voiceDetails.gender.textContent = formatters.genderIcon(voice.gender);
+            elements.voiceDetails.gender.className = `voice-gender-icon fa-solid ${formatters.genderClass(voice.gender)}`;
         }
     }
 
