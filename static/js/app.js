@@ -57,6 +57,11 @@ const App = (() => {
             lang: document.getElementById('detailVoiceLang'),
             gender: document.getElementById('detailVoiceGender'),
         };
+        elements.summary = {
+            voices: document.getElementById('summaryVoices'),
+            languages: document.getElementById('summaryLanguages'),
+            gender: document.getElementById('summaryGender'),
+        };
         elements.speedSlider = document.getElementById('speedSlider');
         elements.speedValue = document.getElementById('speedValue');
         elements.scriptInput = document.getElementById('singleText');
@@ -178,6 +183,7 @@ const App = (() => {
         });
 
         updateVoiceDetails();
+        updateSummary();
     }
 
     function setSelectedVoice(voiceId) {
@@ -204,6 +210,27 @@ const App = (() => {
         if (elements.voiceDetails.gender) {
             elements.voiceDetails.gender.src = formatters.genderIcon(voice.gender);
             elements.voiceDetails.gender.alt = voice.gender || 'gender';
+        }
+    }
+
+    function updateSummary() {
+        if (!elements.summary) return;
+        const maleCount = voices.filter((voice) => voice.gender === 'male').length;
+        const femaleCount = voices.filter((voice) => voice.gender === 'female').length;
+        const otherCount = voices.length - maleCount - femaleCount;
+        const genderPieces = [];
+        if (femaleCount) genderPieces.push(`${femaleCount}F`);
+        if (maleCount) genderPieces.push(`${maleCount}M`);
+        if (otherCount) genderPieces.push(`${otherCount}U`);
+
+        if (elements.summary.voices) {
+            elements.summary.voices.textContent = voices.length;
+        }
+        if (elements.summary.languages) {
+            elements.summary.languages.textContent = languages.length;
+        }
+        if (elements.summary.gender) {
+            elements.summary.gender.textContent = genderPieces.length ? genderPieces.join(' / ') : '—';
         }
     }
 
@@ -298,10 +325,9 @@ const App = (() => {
             const response = await fetch('/model_status');
             const data = await response.json();
             elements.statusPill.classList.remove('status-pill--warning', 'status-pill--error');
+            const deviceLabel = data && data.device ? data.device : 'unknown';
             if (data.loaded) {
-                const modelLabel = data && data.model_name ? data.model_name : 'Kokoro TTS';
-                const deviceLabel = data && data.device ? data.device : 'unknown';
-                elements.statusText.textContent = `${modelLabel} · ${deviceLabel}`;
+                elements.statusText.textContent = `Aurora Voice Studio · ${deviceLabel}`;
             } else if (data.model_exists) {
                 elements.statusPill.classList.add('status-pill--warning');
                 elements.statusText.textContent = 'Model found, awaiting initialization';
@@ -624,6 +650,7 @@ const App = (() => {
         bindVoiceSearch();
         populateSettings();
         renderVoiceLibrary();
+        updateSummary();
     }
 
     return { init };
