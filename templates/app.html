@@ -61,8 +61,11 @@
                             <div class="config-tile config-tile--wide" id="voiceDetails">
                                 <div class="config-tile__label">Voice details</div>
                                 <div class="voice-details">
-                                    <div><strong id="detailVoiceId">af_heart</strong> · <span id="detailVoiceLang">American English</span></div>
-                                    <div id="detailVoiceMeta" class="voice-details__meta"></div>
+                                    <div class="voice-details__name">
+                                        <span id="detailVoiceGender" class="voice-gender-icon">♀</span>
+                                        <strong id="detailVoiceName">Heart</strong>
+                                    </div>
+                                    <div class="voice-details__meta"><span id="detailVoiceId">af_heart</span> · <span id="detailVoiceLang">American English</span></div>
                                 </div>
                             </div>
                         </div>
@@ -163,10 +166,13 @@
     <template id="voiceCardTemplate">
         <div class="voice-card" data-voice>
             <div class="voice-card__header">
-                <strong data-voice-id></strong>
+                <span class="voice-card__gender" data-voice-gender>♀</span>
+                <div class="voice-card__title">
+                    <strong data-voice-name></strong>
+                    <span class="voice-card__id" data-voice-id></span>
+                </div>
                 <span class="voice-card__grade" data-voice-grade></span>
             </div>
-            <div class="voice-card__meta" data-voice-meta></div>
             <button class="voice-card__select">Select</button>
         </div>
     </template>

@@ -19,12 +19,10 @@ const App = (() => {
 
     const formatters = {
         grade: (grade) => grade ? `Grade ${grade}` : 'Ungraded',
-        details: (voice) => {
-            const parts = [];
-            if (voice.target_quality) parts.push(`Target ${voice.target_quality}`);
-            if (voice.training_duration) parts.push(voice.training_duration);
-            if (voice.traits) parts.push(voice.traits);
-            return parts.length ? parts.join(' · ') : 'No metadata available';
+        genderIcon: (gender) => {
+            if (gender === 'male') return '♂';
+            if (gender === 'female') return '♀';
+            return '∗';
         },
     };
 
@@ -43,9 +41,10 @@ const App = (() => {
         elements.voiceList = document.getElementById('voiceList');
         elements.voiceCardTemplate = document.getElementById('voiceCardTemplate');
         elements.voiceDetails = {
+            name: document.getElementById('detailVoiceName'),
             id: document.getElementById('detailVoiceId'),
             lang: document.getElementById('detailVoiceLang'),
-            meta: document.getElementById('detailVoiceMeta'),
+            gender: document.getElementById('detailVoiceGender'),
         };
         elements.speedSlider = document.getElementById('speedSlider');
         elements.speedValue = document.getElementById('speedValue');
@@ -128,15 +127,17 @@ const App = (() => {
         const tpl = elements.voiceCardTemplate.content.cloneNode(true);
         const card = tpl.querySelector('[data-voice]');
         const idEl = tpl.querySelector('[data-voice-id]');
+        const nameEl = tpl.querySelector('[data-voice-name]');
+        const genderEl = tpl.querySelector('[data-voice-gender]');
         const gradeEl = tpl.querySelector('[data-voice-grade]');
-        const metaEl = tpl.querySelector('[data-voice-meta]');
         const selectBtn = tpl.querySelector('.voice-card__select');
 
         card.dataset.voice = voice.id;
         if (isActive) card.classList.add('active');
         idEl.textContent = voice.id;
+        nameEl.textContent = voice.display_name || voice.id;
+        genderEl.textContent = formatters.genderIcon(voice.gender);
         gradeEl.textContent = voice.overall_grade || '—';
-        metaEl.textContent = formatters.details(voice);
         selectBtn.addEventListener('click', () => setSelectedVoice(voice.id));
         card.addEventListener('click', (event) => {
             if (event.target === selectBtn) return;
@@ -179,9 +180,18 @@ const App = (() => {
     function updateVoiceDetails() {
         if (!state.selectedVoice || !elements.voiceDetails) return;
         const voice = state.selectedVoice;
-        elements.voiceDetails.id.textContent = voice.id;
-        elements.voiceDetails.lang.textContent = voice.language_label;
-        elements.voiceDetails.meta.textContent = formatters.details(voice);
+        if (elements.voiceDetails.name) {
+            elements.voiceDetails.name.textContent = voice.display_name || voice.id;
+        }
+        if (elements.voiceDetails.id) {
+            elements.voiceDetails.id.textContent = voice.id;
+        }
+        if (elements.voiceDetails.lang) {
+            elements.voiceDetails.lang.textContent = voice.language_label;
+        }
+        if (elements.voiceDetails.gender) {
+            elements.voiceDetails.gender.textContent = formatters.genderIcon(voice.gender);
+        }
     }
 
     function bindSingleControls() {
@@ -562,10 +572,6 @@ const App = (() => {
             .filter((voice) => !query || voice.id.toLowerCase().includes(query) || (voice.language_label || '').toLowerCase().includes(query))
             .forEach((voice) => {
                 const card = createVoiceCard(voice, state.selectedVoice && state.selectedVoice.id === voice.id);
-                const details = document.createElement('div');
-                details.className = 'voice-card__meta';
-                details.textContent = `${voice.language_label} · ${voice.gender}`;
-                card.insertBefore(details, card.querySelector('.voice-card__select'));
                 elements.voiceLibraryList.appendChild(card);
             });
     }
