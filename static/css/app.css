@@ -8,8 +8,8 @@
     --border: #e5e7eb;
     --text: #1f2937;
     --muted: #6b7280;
-    --shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
-    --radius: 20px;
+    --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    --radius: 16px;
     --font: "Inter", "Segoe UI", sans-serif;
 }
 
@@ -35,12 +35,12 @@ body {
 }
 
 .topbar__inner {
-    max-width: 1200px;
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 20px 28px;
+    padding: 14px 20px;
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 18px;
 }
 
 .brand {
@@ -51,13 +51,11 @@ body {
 }
 
 .brand__icon {
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 34px;
     border-radius: 12px;
-    background: linear-gradient(130deg, var(--primary), var(--accent));
-    display: grid;
-    place-items: center;
-    font-size: 1.2rem;
+    background: transparent;
+    object-fit: contain;
 }
 
 .brand__title {
@@ -67,7 +65,7 @@ body {
 
 .main-nav {
     display: flex;
-    gap: 6px;
+    gap: 4px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 4px;
@@ -77,7 +75,7 @@ body {
     border: none;
     background: transparent;
     color: rgba(255, 255, 255, 0.72);
-    padding: 10px 18px;
+    padding: 8px 14px;
     border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
@@ -94,8 +92,8 @@ body {
     margin-left: auto;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 16px;
+    gap: 8px;
+    padding: 8px 14px;
     border-radius: 999px;
     background: rgba(16, 185, 129, 0.12);
     color: #d1fae5;
@@ -131,11 +129,11 @@ body {
 }
 
 .page {
-    max-width: 1200px;
-    margin: 36px auto 70px;
-    padding: 0 28px;
+    max-width: 1180px;
+    margin: 20px auto 36px;
+    padding: 0 20px;
     display: grid;
-    gap: 26px;
+    gap: 16px;
 }
 
 .view {
@@ -149,17 +147,17 @@ body {
 
 .view__grid {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 24px;
+    grid-template-columns: 280px 1fr;
+    gap: 18px;
 }
 
 .panel {
     background: var(--surface);
     border-radius: var(--radius);
-    padding: 26px;
+    padding: 18px;
     box-shadow: var(--shadow);
     display: grid;
-    gap: 20px;
+    gap: 18px;
 }
 
 .panel__title {
@@ -239,7 +237,7 @@ body {
 .voice-card {
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 14px;
+    padding: 12px;
     display: grid;
     gap: 12px;
     background: var(--surface-alt);
@@ -273,8 +271,8 @@ body {
 }
 
 .voice-card__gender {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
 }
 
@@ -306,22 +304,22 @@ body {
 
 .workspace {
     display: grid;
-    gap: 24px;
+    gap: 18px;
 }
 
 .card {
     background: var(--surface);
     border-radius: var(--radius);
-    padding: 26px;
+    padding: 20px;
     box-shadow: var(--shadow);
     display: grid;
-    gap: 20px;
+    gap: 16px;
 }
 
 .config-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
 }
 
 .config-tile {
@@ -375,8 +373,8 @@ body {
 }
 
 .voice-gender-icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
 }
 
@@ -387,7 +385,7 @@ body {
 
 .script-input {
     width: 100%;
-    min-height: 220px;
+    min-height: 180px;
     border-radius: 18px;
     border: 1px dashed rgba(99, 102, 241, 0.35);
     padding: 20px;
@@ -411,7 +409,7 @@ body {
 
 .actions {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 .btn {
@@ -419,7 +417,7 @@ body {
     color: #fff;
     border: none;
     border-radius: 12px;
-    padding: 14px 18px;
+    padding: 10px 16px;
     font-weight: 600;
     cursor: pointer;
     flex: 1;
@@ -442,7 +440,7 @@ body {
 }
 
 .output-placeholder {
-    padding: 20px;
+    padding: 16px;
     border-radius: 16px;
     border: 1px dashed rgba(99, 102, 241, 0.35);
     background: var(--surface-alt);
@@ -460,7 +458,7 @@ body {
 }
 
 .output-waveform {
-    height: 70px;
+    height: 56px;
     border-radius: 14px;
     background: linear-gradient(90deg, rgba(99, 102, 241, 0.25) 0%, rgba(14, 165, 233, 0.35) 50%, rgba(99, 102, 241, 0.25) 100%);
     opacity: 0.45;
@@ -474,7 +472,7 @@ body {
     display: flex;
     justify-content: space-between;
     color: var(--muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .stepper {
@@ -484,7 +482,7 @@ body {
 }
 
 .stepper__step {
-    padding: 14px;
+    padding: 11px;
     border-radius: 12px;
     background: var(--surface-alt);
     border: 1px solid var(--border);
@@ -500,14 +498,14 @@ body {
 }
 
 .stepper__button {
-    border-radius: 12px;
-    border: 1px dashed rgba(99, 102, 241, 0.35);
+    border-radius: 10px;
+    border: 1px dashed rgba(99, 102, 241, 0.3);
     background: var(--surface-alt);
     color: var(--primary-dark);
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s ease, transform 0.2s ease;
-    padding: 14px 12px;
+    padding: 11px 10px;
 }
 
 .stepper__button:hover {
@@ -518,7 +516,7 @@ body {
 .batch-toolbar {
     display: flex;
     gap: 12px;
-    margin: 16px 0;
+    margin: 12px 0;
 }
 
 .batch-toolbar__spacer {
@@ -540,7 +538,7 @@ body {
 
 .batch-table th,
 .batch-table td {
-    padding: 14px;
+    padding: 12px;
     border-bottom: 1px solid var(--border);
     text-align: left;
     font-size: 0.9rem;
@@ -556,7 +554,7 @@ body {
 
 .batch-textarea {
     width: 100%;
-    min-height: 120px;
+    min-height: 90px;
     border-radius: 12px;
     border: 1px solid var(--border);
     padding: 10px;
@@ -577,7 +575,7 @@ body {
 }
 
 .queue-grid {
-    margin-top: 24px;
+    margin-top: 18px;
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 24px;
@@ -591,7 +589,7 @@ body {
 .summary-line {
     display: flex;
     justify-content: space-between;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .job-stream {
@@ -602,7 +600,7 @@ body {
 .job-card {
     border: 1px solid rgba(99, 102, 241, 0.18);
     border-radius: 16px;
-    padding: 18px;
+    padding: 15px;
     background: var(--surface);
     display: grid;
     gap: 10px;
@@ -653,7 +651,7 @@ body {
 
 .voice-library {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 16px;
     margin-top: 20px;
 }
@@ -709,7 +707,7 @@ body {
     }
 
     .page {
-        padding: 0 18px;
+        padding: 0 16px;
     }
 }
 

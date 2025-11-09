@@ -11,14 +11,13 @@
     <header class="topbar">
         <div class="topbar__inner">
             <div class="brand">
-                <div class="brand__icon">🎧</div>
+                <img class="brand__icon" src="{{ url_for('static', filename='assets/Color_transparent.png') }}" alt="Aurora Voice Studio logo">
                 <div class="brand__title">Aurora Voice Studio</div>
             </div>
             <nav class="main-nav">
                 <button class="main-nav__button active" data-nav="single">Single</button>
                 <button class="main-nav__button" data-nav="batch">Batch</button>
                 <button class="main-nav__button" data-nav="voices">Voice Library</button>
-                <button class="main-nav__button" data-nav="settings">Settings</button>
             </nav>
             <div id="modelStatusPill" class="status-pill">
                 <span class="status-pill__dot"></span>
@@ -69,11 +68,7 @@
                                 <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1" class="config-tile__slider">
                                 <div id="speedValue" class="config-tile__value">1.0×</div>
                             </div>
-                            <div class="config-tile">
-                                <div class="config-tile__label">Temperature</div>
-                                <div class="config-tile__placeholder">Reserved for future stochastic controls</div>
-                            </div>
-                            <div class="config-tile config-tile--wide" id="voiceDetails">
+                            <div class="config-tile" id="voiceDetails">
                                 <div class="config-tile__label">Voice details</div>
                                 <div class="voice-details">
                                     <div class="voice-details__name">
@@ -94,7 +89,6 @@
                             <span>Use markdown for emphasis.</span>
                         </div>
                         <div class="actions">
-                            <button class="btn btn--secondary" id="previewBtn" disabled>Preview Segment</button>
                             <button class="btn" id="generateBtn">Generate Speech</button>
                         </div>
                     </section>
@@ -158,22 +152,6 @@
                     <input id="voiceSearch" class="filter__input" type="search" placeholder="Search voices…">
                 </div>
                 <div id="voiceLibraryList" class="voice-library"></div>
-            </div>
-        </section>
-
-        <section id="view-settings" class="view">
-            <div class="card">
-                <h3 class="panel__title">Environment</h3>
-                <pre class="settings-pre" id="settingsInfo"></pre>
-            </div>
-            <div class="card">
-                <h3 class="panel__title">Quick tips</h3>
-                <ul class="tips-list">
-                    <li>Select `af_heart` or `af_bella` for high-quality English narration.</li>
-                    <li>Speed values outside 0.7×–1.3× may sound rushed or stretched.</li>
-                    <li>Batch mode processes jobs sequentially in this prototype.</li>
-                    <li>Temperature control is planned once stochastic decoding is exposed upstream.</li>
-                </ul>
             </div>
         </section>
     </main>

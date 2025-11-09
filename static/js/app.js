@@ -43,7 +43,6 @@ const App = (() => {
             single: document.getElementById('view-single'),
             batch: document.getElementById('view-batch'),
             voices: document.getElementById('view-voices'),
-            settings: document.getElementById('view-settings'),
         };
         elements.statusPill = document.getElementById('modelStatusPill');
         elements.statusText = elements.statusPill ? elements.statusPill.querySelector('.status-pill__text') : null;
@@ -67,7 +66,6 @@ const App = (() => {
         elements.scriptInput = document.getElementById('singleText');
         elements.charCount = document.getElementById('charCount');
         elements.generateBtn = document.getElementById('generateBtn');
-        elements.previewBtn = document.getElementById('previewBtn');
         elements.outputPlaceholder = document.getElementById('outputPlaceholder');
         elements.outputArea = document.getElementById('outputArea');
         elements.audioPlayer = document.getElementById('singleAudio');
@@ -84,7 +82,6 @@ const App = (() => {
         elements.jobCardTemplate = document.getElementById('jobCardTemplate');
         elements.voiceLibraryList = document.getElementById('voiceLibraryList');
         elements.voiceSearch = document.getElementById('voiceSearch');
-        elements.settingsInfo = document.getElementById('settingsInfo');
     }
 
     function bindNavigation() {
@@ -621,16 +618,6 @@ const App = (() => {
         }
     }
 
-    function populateSettings() {
-        if (!elements.settingsInfo) return;
-        const info = {
-            model: modelInfo,
-            voice_count: voices.length,
-            languages,
-        };
-        elements.settingsInfo.textContent = JSON.stringify(info, null, 2);
-    }
-
     function initBatchModule() {
         if (!batch.rows.length) addBatchRow();
         renderBatchSummary();
@@ -648,7 +635,6 @@ const App = (() => {
         bindBatchControls();
         initBatchModule();
         bindVoiceSearch();
-        populateSettings();
         renderVoiceLibrary();
         updateSummary();
     }
