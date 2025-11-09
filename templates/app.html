@@ -117,15 +117,15 @@
                 <h3 class="panel__title">Batch production</h3>
                 <div class="stepper">
                     <div class="stepper__step stepper__step--active">1. Prepare</div>
-                    <div class="stepper__step">2. Review</div>
-                    <div class="stepper__step">3. Monitor</div>
+                    <button class="stepper__button" id="addRowBtn" type="button">Add Row</button>
+                    <button class="stepper__button" id="loadSampleBtn" type="button">Load Sample Data</button>
                 </div>
+
                 <div class="batch-toolbar">
-                    <button class="btn btn--secondary" id="addRowBtn">Add Row</button>
-                    <button class="btn btn--secondary" id="loadSampleBtn">Load Sample Data</button>
                     <div class="batch-toolbar__spacer"></div>
                     <button class="btn" id="runBatchBtn">Generate Batch</button>
                 </div>
+
                 <div class="table-wrapper">
                     <table class="batch-table">
                         <thead>

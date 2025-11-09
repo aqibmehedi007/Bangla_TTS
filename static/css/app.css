@@ -499,10 +499,26 @@ body {
     box-shadow: 0 12px 22px rgba(99, 102, 241, 0.15);
 }
 
+.stepper__button {
+    border-radius: 12px;
+    border: 1px dashed rgba(99, 102, 241, 0.35);
+    background: var(--surface-alt);
+    color: var(--primary-dark);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    padding: 14px 12px;
+}
+
+.stepper__button:hover {
+    background: var(--surface);
+    transform: translateY(-1px);
+}
+
 .batch-toolbar {
     display: flex;
     gap: 12px;
-    margin-bottom: 12px;
+    margin: 16px 0;
 }
 
 .batch-toolbar__spacer {
