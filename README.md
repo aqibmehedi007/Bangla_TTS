@@ -1,4 +1,4 @@
-# Kokoro TTS Module - Bengali Voice Cloning 🇧🇩
+# Bangla TTS - Voice Cloning (XTTS v2) 🇧🇩
 
 This project enables high-quality Bengali text-to-speech with **Authentic Voice Cloning** using Coqui XTTS v2.
 
