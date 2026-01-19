@@ -1,0 +1,190 @@
+dataset/0067/audio.wav|Rater bela bagane hasnahenar gondho mo mo kore.|0
+dataset/0188/audio.wav|Obichol lokkho shaphollyer ordhek nishchoyota prodan kore.|0
+dataset/0102/audio.wav|Sukkhmo bicharbudhi shomponno manusher shonkhya kromosho komchhe.|0
+dataset/0194/audio.wav|Okatto proman chhara kaoke doshi shabbesto kora jayej noy.|0
+dataset/0112/audio.wav|Khūdro riner madhyome gramin orthonitir obhutopurbo unnoyon ghotechhe.|0
+dataset/0122/audio.wav|Odommo ichchha thakle jekono badha otikrom kora jay.|0
+dataset/0014/audio.wav|Brishtir dine khichuri khete besh lage.|0
+dataset/0003/audio.wav|Ajker abohawa khub shundor.|0
+dataset/0065/audio.wav|Matir chulay ranna kora khabarer shad-i alada.|0
+dataset/0045/audio.wav|Cox's Bazar-er shomudro shoikot prithibir dirghotomo.|0
+dataset/0137/audio.wav|Khoma mohotthwer lokkhon.|0
+dataset/0171/audio.wav|Binito achoron shobar mon joy kore njæy.|0
+dataset/0129/audio.wav|Bikhhyato monishider jiboni theke onek kichhu shikkhar achhe.|0
+dataset/0077/audio.wav|Agamikal ekti joruri meeting achhe.|0
+dataset/0159/audio.wav|Osthir mon nije shothik shidhanto neowa jay na.|0
+dataset/0168/audio.wav|Shantipurno shomadhan-i dirghomejadi unnoynir poth proshosto kore.|0
+dataset/0046/audio.wav|Shokale ghum theke otha shasther jonno upokari.|0
+dataset/0131/audio.wav|Biplobi chetona onyjaj o obicharer biruddhe lorai korte shikhaj.|0
+dataset/0031/audio.wav|Apnar priyo khabar konti?|0
+dataset/0004/audio.wav|Ami bhat khete bhalobashi.|0
+dataset/0160/audio.wav|Nittoproyojoniyo jinisher dam barle shadharon manusher koshto hoy.|0
+dataset/0016/audio.wav|Chayer kape jhor tola bangalir shobhab.|0
+dataset/0043/audio.wav|Padma shetu amader gorbo.|0
+dataset/0127/audio.wav|Budhiman manush shomoyer shodbbyabohar kore.|0
+dataset/0187/audio.wav|Probol ichchha-shakti thakle pahar-ke joy kora shombhob.|0
+dataset/0163/audio.wav|Ojo gãje thekeo she deshkhhyato protibha orjon koreeachhe.|0
+dataset/0048/audio.wav|Boroder shomman kora ebong chhotoder bhalobasha uchit.|0
+dataset/0111/audio.wav|Tibro dabdōhe jonojibon najehal hoye porechhe.|0
+dataset/0006/audio.wav|Boi pora amar priyo shokh.|0
+dataset/0195/audio.wav|Bikhhyato ei mondirer sthapotto mon kere njæy.|0
+dataset/0038/audio.wav|Shitkale pitha khawar utsob dhumdham hoy.|0
+dataset/0123/audio.wav|Bishmoykor ei prithibi rohosshye ghera.|0
+dataset/0013/audio.wav|Skoole onek bondhu achhe.|0
+dataset/0037/audio.wav|Desher jonno pran dewa birer kaj.|0
+dataset/0154/audio.wav|Oitihashik nirdoshon-gulo amader gourōbmoy otiter shakkhi.|0
+dataset/0070/audio.wav|Bangalir baro mashe tero parbon.|0
+dataset/0062/audio.wav|Jibjontur proti amader doyalu howa uchit.|0
+dataset/0196/audio.wav|Shurjalok vitamin D-er ekti bhalo utsob.|0
+dataset/0033/audio.wav|Computer chalano ekhon khub shohoj hoye gechhe.|0
+dataset/0173/audio.wav|Bichitro ei dhoronir porote porote bishmoy royechhe.|0
+dataset/0172/audio.wav|Onjyajkarir shashti howa njaibicharer drishtanto.|0
+dataset/0061/audio.wav|Shobuj bonani amader omullo shompod.|0
+dataset/0011/audio.wav|Apnar shathe kotha bole khub bhalo laglo.|0
+dataset/0145/audio.wav|Bishri shopno dekhe ami majhrate jege uthlam.|0
+dataset/0161/audio.wav|Shikkhai jatir bhobishshot unnoyoner mul chabikathi.|0
+dataset/0053/audio.wav|Bidaybelay monta khub kharap hoye jay.|0
+dataset/0126/audio.wav|Probol jōlochchhashe upokulijo elaka plabito hoyeachhe.|0
+dataset/0107/audio.wav|Itihasher pataj onek sthapotto-shoilir bornona pawa jay.|0
+dataset/0074/audio.wav|Dhoirjo dhorun, bhalo phol oboshshoy paben.|0
+dataset/0114/audio.wav|Kothor shringkholaboddho jibon-i shapholler chabikathi.|0
+dataset/0106/audio.wav|Biporjoyer mukhe-o jara obichol thake tarai prokrit bir.|0
+dataset/0096/audio.wav|Mon diye kaj korle joy nishchito.|0
+dataset/0104/audio.wav|Sahityochorchā manusher moner shonkirnoto dur korte shahajjo kore.|0
+dataset/0146/audio.wav|Brishtir jhirjhir shobde ghumta khub bhalo hoy.|0
+dataset/0044/audio.wav|Shundorbon-er horin ar bagh dekhte onek porjotok ashe.|0
+dataset/0001/audio.wav|Nomoshkar, apni kemon achhen?|0
+dataset/0162/audio.wav|Shot kormer phol shorboda mishti hoy.|0
+dataset/0193/audio.wav|Biporit poristhitite-o shanto thaka ekti birol gun.|0
+dataset/0017/audio.wav|Rastay jam thakle khub birokto lage.|0
+dataset/0081/audio.wav|Ajker khabarta khub jhal hoyeachhe.|0
+dataset/0103/audio.wav|Prakritik durjog mokabila-i agam proshutir proyojon onoshwikarjo.|0
+dataset/0039/audio.wav|Nodir srot karo jonno opekkha kore na.|0
+dataset/0157/audio.wav|Shushthu porikolponai kajer ordhek shopholota ene dæy.|0
+dataset/0177/audio.wav|Nishthur prithibir majhajale aboddho amra shobai.|0
+dataset/0136/audio.wav|Prokhor roudre mather phatol brishtir protikkhay thake.|0
+dataset/0079/audio.wav|Phone-ti charge-e dewa dorkar.|0
+dataset/0116/audio.wav|Khudhārto shishuke ek mutho onno dan kora porom dhormo.|0
+dataset/0020/audio.wav|Biddut chole gele onek gorom lage.|0
+dataset/0015/audio.wav|Amader jatiyo phool shapla.|0
+dataset/0178/audio.wav|Shotota shreshtho shompod, ja kere neowa jay na.|0
+dataset/0147/audio.wav|Shohor jure ron'gin alor jholkani dekha jachhe.|0
+dataset/0180/audio.wav|Shobuj prokrito amader klanti dur kore proshanti dæy.|0
+dataset/0066/audio.wav|Borshar brishtite bhije kanchli khawar din-gulo mone pore.|0
+dataset/0085/audio.wav|Rater bela pora-shona korte amar shubidha hoy.|0
+dataset/0166/audio.wav|Biporjoyer shomoye dhoirjo dhorai shreshtho gun.|0
+dataset/0047/audio.wav|Mithya kotha bola mohapap.|0
+dataset/0105/audio.wav|Oshamanno panditto orjon korte hole prochur odhyoboshayer dorkar.|0
+dataset/0080/audio.wav|Ektu jol pawa jabe ki? Ami khub trishnarto.|0
+dataset/0055/audio.wav|Duhkhito, ami apnar kotha bujhite parini.|0
+dataset/0197/audio.wav|Oshot shon'gge theke nijer jibon noshto koro na.|0
+dataset/0086/audio.wav|Bhore hantle mon ebong shorir dui-i bhalo thake.|0
+dataset/0119/audio.wav|Jotil shomikoron shomadhan korte gobhir monojogger proyojon.|0
+dataset/0110/audio.wav|Krittrim budhimotta bhobishshoter shilpo biplober mul karigor hobe.|0
+dataset/0134/audio.wav|Ondhobishshash shomajke ondhokarer dike thele dæy.|0
+dataset/0143/audio.wav|Opurbo ei jhornir shoundorjo dekhe ami mugdho.|0
+dataset/0034/audio.wav|Internet-er madhyome prithibi ekhon hater muthoy.|0
+dataset/0019/audio.wav|Pakhira gan gaichhe nodir pare.|0
+dataset/0141/audio.wav|Gnan orjoner kono shesh nei.|0
+dataset/0124/audio.wav|Ohon'gkar manusher poton deke ane.|0
+dataset/0176/audio.wav|Bikhhyato monishider bani amader onupranito kore.|0
+dataset/0064/audio.wav|Gramer shanto poribesh monke anondo dæy.|0
+dataset/0084/audio.wav|Pholer raja am, ja shobar priyo.|0
+dataset/0149/audio.wav|Otipriokto dushtchinta shasther khoti kore.|0
+dataset/0101/audio.wav|Bignan o projuktir utkrorsho amader jibondhara bodle dichhe.|0
+dataset/0156/audio.wav|Ogonit manusher attotyager binimoye amra shadhinota peyechhi.|0
+dataset/0073/audio.wav|Chup kore boshe na thake kaj shuru koro.|0
+dataset/0028/audio.wav|Shikkha jatir merudondo.|0
+dataset/0185/audio.wav|Shushthu shomaj gorde noitik mullobodher proyojon khub beshi.|0
+dataset/0113/audio.wav|Onibarjo karon-boshoto ajker onushthanti sthogito ghoshona kora holo.|0
+dataset/0052/audio.wav|Assalamualaikum, kemon achhen?|0
+dataset/0175/audio.wav|Oshim akashe shada megher bhela bheshe berachhe.|0
+dataset/0005/audio.wav|Apni ki kalke bajare jaben?|0
+dataset/0030/audio.wav|Koshto na korle keshto mele na.|0
+dataset/0184/audio.wav|Ottjachari shashoker poton onibarjo.|0
+dataset/0100/audio.wav|Shanti ar bhalobasha diye prithibi joy kora shombhob.|0
+dataset/0099/audio.wav|Ma-babar doa jiboner boro shompod.|0
+dataset/0132/audio.wav|Shomudrer uttal toron'gge nouka chalano besh bipodjonok.|0
+dataset/0125/audio.wav|Shotota o nishtthār shathe dayitto palon kora uchit.|0
+dataset/0199/audio.wav|Okritrim bhalobasha prithibike bodle dite pare.|0
+dataset/0135/audio.wav|Bimorsho chitte kono bhalo kaj kora jay na.|0
+dataset/0179/audio.wav|Ognimurtite kotha bolle shomoshshar shomadhan hoy na.|0
+dataset/0121/audio.wav|Shustho shomaj gothone noitik shikkhar guruttho oporishim.|0
+dataset/0035/audio.wav|Gachh lagano poribesher jonno khub joruri.|0
+dataset/0049/audio.wav|Amader jatiyo kobi Kazi Nazrul Islam.|0
+dataset/0170/audio.wav|Uchchhatshōbhilashi hote giye nijer shikor-ke bhule jeo na.|0
+dataset/0139/audio.wav|Sharthoporota bondhuttwer pothe boro badha.|0
+dataset/0150/audio.wav|Boi manusher nittodin-er shongi ebong shreshtho upohar.|0
+dataset/0133/audio.wav|Bishshajon shara bishshoke ek bishshograme porinoto koreeachhe.|0
+dataset/0128/audio.wav|Shoundorjo kebol bahjik noy, ta manusher ontore-o thake.|0
+dataset/0022/audio.wav|Shototai shorbottam pontha.|0
+dataset/0082/audio.wav|Mishti doi khete amar khub bhalo lage.|0
+dataset/0078/audio.wav|Amar laptop-ti hothat kaj kora bondho kore diyechhe.|0
+dataset/0010/audio.wav|Dhaka Bangladesh-er rajdhani.|0
+dataset/0083/audio.wav|Bajare ilish machher dam onek bere gechhe.|0
+dataset/0165/audio.wav|Oprottyashito shaphollye she attohara hoye porechhe.|0
+dataset/0120/audio.wav|Shurjaster roktim abha akashke ek oporup shaje shajaj.|0
+dataset/0090/audio.wav|Poronto bikele akasher ron'g lal hoye jay.|0
+dataset/0069/audio.wav|Pohela Boishakh-e noboborshor utsob ron'gin hoye othe.|0
+dataset/0054/audio.wav|Ektu shahajjo korte parben ki?|0
+dataset/0091/audio.wav|Jhoro haoway gachher pata norchhe.|0
+dataset/0095/audio.wav|Shwabolombi howa jiboner boro shaphollo.|0
+dataset/0042/audio.wav|Cricket khela ekhon Bangladesh-e onek jonopriyo.|0
+dataset/0094/audio.wav|Ektai bol, e-i amader mulmontro.|0
+dataset/0117/audio.wav|Nishthur shotto onek shomoy mene neowa khub kothin kaj.|0
+dataset/0200/audio.wav|Biplobi mon kono onyjaj mene nite pare na.|0
+dataset/0158/audio.wav|Brikkhoropon obhijaner madhyome desh shobujayon kora shombhob.|0
+dataset/0026/audio.wav|Gnaner alo ghore ghore jalo.|0
+dataset/0181/audio.wav|Bishmoykor protibhar odhikari lok-tike ami chini.|0
+dataset/0148/audio.wav|Manusher choritro tar kormer madhyome phute othe.|0
+dataset/0075/audio.wav|She ki gotokal ekhane eshechhilo?|0
+dataset/0059/audio.wav|Paharer buk chire jhorna boye cholechhe.|0
+dataset/0153/audio.wav|Akoshshmik bonyaj phosholer bæpok khoykhoti hoyeachhe.|0
+dataset/0018/audio.wav|Mather shobuj ghash chokher shanti.|0
+dataset/0050/audio.wav|Rabindronath Thakur bishshokobi hishebe porichito.|0
+dataset/0093/audio.wav|Manusher bipode egiye asha amader dayitto.|0
+dataset/0076/audio.wav|Na, she kalke asheni.|0
+dataset/0142/audio.wav|Mounota onek shomoy shommotir lokkhon bole bicharito hoy.|0
+dataset/0021/audio.wav|Porishrom shoubhaagger proshuti.|0
+dataset/0097/audio.wav|Kokhono hal chhere diyo na.|0
+dataset/0032/audio.wav|Apni ki kokhono paharer churay uthechhen?|0
+dataset/0138/audio.wav|Jibonshon'ggrame tike thakle hole dokkhotar proyojon.|0
+dataset/0118/audio.wav|Uchchhringkhol achoron shamajik shringkholar poriponthi.|0
+dataset/0012/audio.wav|Ma amake khub bhalobashen.|0
+dataset/0068/audio.wav|Pujor chhuti-te bari jayar anondo-i alada.|0
+dataset/0089/audio.wav|Shiter shokale rode boshe thakar aram-i alada.|0
+dataset/0092/audio.wav|Ondhokar rate chander alo poth dekhay.|0
+dataset/0025/audio.wav|Manush manusher jonno.|0
+dataset/0098/audio.wav|Bhobishshoter kotha bhabe kaj kora budhimaner lokkhon.|0
+dataset/0183/audio.wav|Bishushko prantore brishtir jol notun praner shonchar kore.|0
+dataset/0191/audio.wav|Sukkhmo kaj korte gele nikut monojog lage.|0
+dataset/0087/audio.wav|Library-te shantite boi pora jay.|0
+dataset/0182/audio.wav|Odommo spriha manush-ke lokkhosthole poushechhe dæy.|0
+dataset/0040/audio.wav|Shomoyer kaj shomoye kora uchit.|0
+dataset/0169/audio.wav|Okal borshone krishoker mukhe chintar bhānj porechhe.|0
+dataset/0088/audio.wav|Tiffine bondhuder shathe adda dewa khub mojar.|0
+dataset/0186/audio.wav|Ohon'gkari howa budhimaner porichoy noy.|0
+dataset/0041/audio.wav|Apni ki football khelte pochhondo koren?|0
+dataset/0002/audio.wav|Amar nam Akash, apnar nam ki?|0
+dataset/0072/audio.wav|Ei khoborti shune ami khub obak holam.|0
+dataset/0151/audio.wav|Odhoirjo howa manej porajoyer pothe pa bārāno.|0
+dataset/0115/audio.wav|Bangla bhashar shobdobhandar otyonto riddho ebong boichitromoy.|0
+dataset/0057/audio.wav|Akashe aj onek tara dekha jachhe.|0
+dataset/0108/audio.wav|Poribesh dushon rodhe plasticker byabohar borjon kora uchit.|0
+dataset/0192/audio.wav|Porichchhonno poribesh shustho thakar prothom shorto.|0
+dataset/0167/audio.wav|Ojoshro tarar melaj akashta aj khub shundor.|0
+dataset/0051/audio.wav|Shubho jonmodin! Apnar dinti bhalo katuk.|0
+dataset/0144/audio.wav|Oshohay manusher pashe dārāno amader noitik dayitto.|0
+dataset/0198/audio.wav|Bignan o projuktir loraije medhai boro hatiyar.|0
+dataset/0155/audio.wav|Oshlil bhasha shustho ruchir porichoy noy.|0
+dataset/0130/audio.wav|Poromot-shohishnuta gonotontrer onyotom prodhan stombho.|0
+dataset/0060/audio.wav|Boshontokale kokiler gan shunte ki modhur lage!|0
+dataset/0056/audio.wav|Oronye rodon kore kono labh nei.|0
+dataset/0024/audio.wav|Bipode more rokkha koro e nohe mor prarthona.|0
+dataset/0008/audio.wav|Shurjo purbo dike othe ebong poshchim dike osto jay.|0
+dataset/0009/audio.wav|Ami gotokal ekti shundor cinema dekhechhi.|0
+dataset/0109/audio.wav|Shon'gskritir adanprodan bibhinno jatir modhye moitri sthapon kore.|0
+dataset/0152/audio.wav|Prottonto onchole shastho-sheba poushechhe dewa shorkater lokkho.|0
+dataset/0023/audio.wav|Shobure mewa phole.|0
+dataset/0140/audio.wav|Ondhokar rate prodiper alo poth dekhay.|0
+dataset/0174/audio.wav|Shringkholito jibon dirghosthaji shaphollyer bhitti sthapon kore.|0

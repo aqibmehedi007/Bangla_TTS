@@ -1,0 +1,10 @@
+dataset/0027/audio.wav|Majer hashi shorgger shukh.|0
+dataset/0189/audio.wav|Bimorsho diner sheshe ek phali hashi onek dami.|0
+dataset/0036/audio.wav|Porishkar porichhonno thaka shasther jonno bhalo.|0
+dataset/0058/audio.wav|Shomudrer nil jolorashi dekhle mon shanto hoy.|0
+dataset/0063/audio.wav|Shohorer jibon onek besto ar kolaholpurno.|0
+dataset/0071/audio.wav|Apni ki amar shathe ekmot?|0
+dataset/0190/audio.wav|Oshombhob-ke shombhob korai manusher bisheshotto.|0
+dataset/0007/audio.wav|Ei kajti kora khub kothin.|0
+dataset/0029/audio.wav|Bina meghe bojropat.|0
+dataset/0164/audio.wav|Tibro protijogitar bajare tike thaka besh challenging.|0

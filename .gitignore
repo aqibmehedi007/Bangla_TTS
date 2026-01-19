@@ -118,7 +118,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Model files and large data
+# Large files that shouldn't be tracked
 models/
 *.gguf
 *.bin
@@ -136,6 +136,11 @@ models/
 *.flac
 *.ogg
 *.m4a
+
+# Allow Bengali Dataset
+!data/bengali/**/*.wav
+!data/bengali/**/*.json
+!data/bengali/**/*.txt
 
 # Temporary files
 temp/

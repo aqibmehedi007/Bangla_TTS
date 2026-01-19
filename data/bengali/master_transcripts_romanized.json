@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "0001",
+    "original": "নমস্কার, আপনি কেমন আছেন?",
+    "romanized": "nmskar, apni kemn achhen?"
+  },
+  {
+    "id": "0002",
+    "original": "আমার নাম আকাশ, আপনার নাম কি?",
+    "romanized": "amar nam akash, apnar nam ki?"
+  },
+  {
+    "id": "0003",
+    "original": "আজকের আবহাওয়া খুব সুন্দর।",
+    "romanized": "ajker abhaoya khub sundr"
+  },
+  {
+    "id": "0004",
+    "original": "আমি ভাত খেতে ভালোবাসি।",
+    "romanized": "ami bhat khete bhalobasi"
+  },
+  {
+    "id": "0005",
+    "original": "আপনি কি কালকে বাজারে যাবেন?",
+    "romanized": "apni ki kalke bajare jaben?"
+  },
+  {
+    "id": "0006",
+    "original": "বই পড়া আমার প্রিয় শখ।",
+    "romanized": "bi pra amar priy shkh"
+  },
+  {
+    "id": "0007",
+    "original": "এই কাজটি করা খুব কঠিন।",
+    "romanized": "ei kajti kra khub kthin"
+  },
+  {
+    "id": "0008",
+    "original": "সূর্য পূর্ব দিকে ওঠে এবং পশ্চিম দিকে অস্ত যায়।",
+    "romanized": "surj purb dike othe ebng pshchim dike ost jay"
+  },
+  {
+    "id": "0009",
+    "original": "আমি গতকাল একটি সুন্দর সিনেমা দেখেছি।",
+    "romanized": "ami gtkal ekti sundr sinema dekhechhi"
+  },
+  {
+    "id": "0010",
+    "original": "ঢাকা বাংলাদেশের রাজধানী।",
+    "romanized": "dhaka bangladesher rajdhani"
+  },
+  {
+    "id": "0011",
+    "original": "আপনার সাথে কথা বলে খুব ভালো লাগলো।",
+    "romanized": "apnar sathe ktha ble khub bhalo laglo"
+  },
+  {
+    "id": "0012",
+    "original": "মা আমাকে খুব ভালোবাসেন।",
+    "romanized": "ma amake khub bhalobasen"
+  },
+  {
+    "id": "0013",
+    "original": "স্কুলে অনেক বন্ধু আছে।",
+    "romanized": "skule onek bndhu achhe"
+  },
+  {
+    "id": "0014",
+    "original": "বৃষ্টির দিনে খিচুড়ি খেতে বেশ লাগে।",
+    "romanized": "brishtir dine khichuri khete besh lage"
+  },
+  {
+    "id": "0015",
+    "original": "আমাদের জাতীয় ফুল শাপলা।",
+    "romanized": "amader jatiy phul shapla"
+  },
+  {
+    "id": "0016",
+    "original": "চায়ের কাপে ঝড় তোলা বাঙালির স্বভাব।",
+    "romanized": "chayer kape jhr tola bangalir sbbhab"
+  },
+  {
+    "id": "0017",
+    "original": "রাস্তায় জ্যাম থাকলে খুব বিরক্ত লাগে।",
+    "romanized": "rastay jjam thakle khub birkt lage"
+  },
+  {
+    "id": "0018",
+    "original": "মাঠের সবুজ ঘাস চোখের শান্তি।",
+    "romanized": "mather sbuj ghas chokher shanti"
+  },
+  {
+    "id": "0019",
+    "original": "পাখিরা গান গাইছে নদীর পাড়ে।",
+    "romanized": "pakhira gan gaichhe ndir pare"
+  },
+  {
+    "id": "0020",
+    "original": "বিদ্যুৎ চলে গেলে অনেক গরম লাগে।",
+    "romanized": "bidjut chle gele onek grm lage"
+  },
+  {
+    "id": "0021",
+    "original": "পরিশ্রম সৌভাগ্যের প্রসূতি।",
+    "romanized": "prishrm soubhagjer prsuti"
+  },
+  {
+    "id": "0022",
+    "original": "সততাই সর্বোত্তম পন্থা।",
+    "romanized": "sttai srbottm pntha"
+  },
+  {
+    "id": "0023",
+    "original": "সবুরে মেওয়া ফলে।",
+    "romanized": "sbure meoya phle"
+  },
+  {
+    "id": "0024",
+    "original": "বিপদে মোরে রক্ষা করো এ নহে মোর প্রার্থনা।",
+    "romanized": "bipde more rksha kro e nhe mor prarthna"
+  },
+  {
+    "id": "0025",
+    "original": "মানুষ মানুষের জন্য।",
+    "romanized": "manush manusher jnj"
+  },
+  {
+    "id": "0026",
+    "original": "জ্ঞানের আলো ঘরে ঘরে জ্বালো।",
+    "romanized": "jnaner alo ghre ghre jbalo"
+  },
+  {
+    "id": "0027",
+    "original": "মায়ের হাসি স্বর্গের সুখ।",
+    "romanized": "mayer hasi sbrger sukh"
+  },
+  {
+    "id": "0028",
+    "original": "শিক্ষা জাতির মেরুদণ্ড।",
+    "romanized": "shiksha jatir merudnd"
+  },
+  {
+    "id": "0029",
+    "original": "বিনা মেঘে বজ্রপাত।",
+    "romanized": "bina meghe bjrpat"
+  },
+  {
+    "id": "0030",
+    "original": "কষ্ট না করলে কেষ্ট মেলে না।",
+    "romanized": "ksht na krle kesht mele na"
+  },
+  {
+    "id": "0031",
+    "original": "আপনার প্রিয় খাবার কোনটি?",
+    "romanized": "apnar priy khabar konti?"
+  },
+  {
+    "id": "0032",
+    "original": "আপনি কি কখনো পাহাড়ের চূড়ায় উঠেছেন?",
+    "romanized": "apni ki kkhno paharer churay uthechhen?"
+  },
+  {
+    "id": "0033",
+    "original": "কম্পিউটার চালানো এখন খুব সহজ হয়ে গেছে।",
+    "romanized": "kmpiutar chalano ekhn khub shj hye gechhe"
+  },
+  {
+    "id": "0034",
+    "original": "ইন্টারনেটের মাধ্যমে পৃথিবী এখন হাতের মুঠোয়।",
+    "romanized": "intarneter madhjme prithibi ekhn hater muthoy"
+  },
+  {
+    "id": "0035",
+    "original": "গাছ লাগানো পরিবেশের জন্য খুব জরুরি।",
+    "romanized": "gachh lagano pribesher jnj khub jruri"
+  },
+  {
+    "id": "0036",
+    "original": "পরিষ্কার পরিচ্ছন্ন থাকা স্বাস্থ্যের জন্য ভালো।",
+    "romanized": "prishkar prichchhnn thaka sbasthjer jnj bhalo"
+  },
+  {
+    "id": "0037",
+    "original": "দেশের জন্য প্রাণ দেওয়া বীরের কাজ।",
+    "romanized": "desher jnj pran deoya birer kaj"
+  },
+  {
+    "id": "0038",
+    "original": "শীতকালে পিঠা খাওয়ার উৎসব ধুমধাম হয়।",
+    "romanized": "shitkale pitha khaoyar utsb dhumdham hy"
+  },
+  {
+    "id": "0039",
+    "original": "নদীর স্রোত কারো জন্য অপেক্ষা করে না।",
+    "romanized": "ndir srot karo jnj opeksha kre na"
+  },
+  {
+    "id": "0040",
+    "original": "সময়ের কাজ সময়ে করা উচিত।",
+    "romanized": "smyer kaj smye kra uchit"
+  },
+  {
+    "id": "0041",
+    "original": "আপনি কি ফুটবল খেলতে পছন্দ করেন?",
+    "romanized": "apni ki phutbl khelte pchhnd kren?"
+  },
+  {
+    "id": "0042",
+    "original": "ক্রিকেট খেলা এখন বাংলাদেশে অনেক জনপ্রিয়।",
+    "romanized": "kriket khela ekhn bangladeshe onek jnpriy"
+  },
+  {
+    "id": "0043",
+    "original": "পদ্মা সেতু আমাদের গর্ব।",
+    "romanized": "pdma setu amader grb"
+  },
+  {
+    "id": "0044",
+    "original": "সুন্দরবনের হরিণ আর বাঘ দেখতে অনেক পর্যটক আসে।",
+    "romanized": "sundrbner hrin ar bagh dekhte onek prjtk ase"
+  },
+  {
+    "id": "0045",
+    "original": "কক্সবাজারের সমুদ্র সৈকত পৃথিবীর দীর্ঘতম।",
+    "romanized": "kksbajarer smudr soikt prithibir dirghtm"
+  },
+  {
+    "id": "0046",
+    "original": "সকালে ঘুম থেকে ওঠা স্বাস্থ্যের জন্য উপকারী।",
+    "romanized": "skale ghum theke otha sbasthjer jnj upkari"
+  },
+  {
+    "id": "0047",
+    "original": "মিথ্যা কথা বলা মহাপাপ।",
+    "romanized": "mithja ktha bla mhapap"
+  },
+  {
+    "id": "0048",
+    "original": "বড়দের সম্মান করা এবং ছোটদের ভালোবাসা উচিত।",
+    "romanized": "brder smman kra ebng chhotder bhalobasa uchit"
+  },
+  {
+    "id": "0049",
+    "original": "আমাদের জাতীয় কবি কাজী নজরুল ইসলাম।",
+    "romanized": "amader jatiy kbi kaji njrul islam"
+  },
+  {
+    "id": "0050",
+    "original": "রবীন্দ্রনাথ ঠাকুর বিশ্বকবি হিসেবে পরিচিত।",
+    "romanized": "rbindrnath thakur bishbkbi hisebe prichit"
+  },
+  {
+    "id": "0051",
+    "original": "শুভ জন্মদিন! আপনার দিনটি ভালো কাটুক।",
+    "romanized": "shubh jnmdin! apnar dinti bhalo katuk"
+  },
+  {
+    "id": "0052",
+    "original": "আসসালামu আলাইকুম, কেমন আছেন?",
+    "romanized": "assalamu alaikum, kemn achhen?"
+  },
+  {
+    "id": "0053",
+    "original": "বিদায়বেলায় মনটা খুব খারাপ হয়ে যায়।",
+    "romanized": "bidaybelay mnta khub kharap hye jay"
+  },
+  {
+    "id": "0054",
+    "original": "একটু সাহায্য করতে পারবেন কি?",
+    "romanized": "ektu sahajj krte parben ki?"
+  },
+  {
+    "id": "0055",
+    "original": "দুঃখিত, আমি আপনার কথা বুঝতে পারিনি।",
+    "romanized": "duhkhit, ami apnar ktha bujhte parini"
+  },
+  {
+    "id": "0056",
+    "original": "অরণ্যে রোদন করে কোনো লাভ নেই।",
+    "romanized": "ornje rodn kre kono labh nei"
+  },
+  {
+    "id": "0057",
+    "original": "আকাশে আজ অনেক তারা দেখা যাচ্ছে।",
+    "romanized": "akashe aj onek tara dekha jachchhe"
+  },
+  {
+    "id": "0058",
+    "original": "সমুদ্রের নীল জলরাশি দেখলে মন শান্ত হয়।",
+    "romanized": "smudrer nil jlrashi dekhle mn shant hy"
+  },
+  {
+    "id": "0059",
+    "original": "পাহাড়ের বুক চিরে ঝর্ণা বয়ে চলেছে।",
+    "romanized": "paharer buk chire jhrna bye chlechhe"
+  },
+  {
+    "id": "0060",
+    "original": "বসন্তকালে কোকিলের গান শুনতে কি মধুর লাগে!",
+    "romanized": "bsntkale kokiler gan shunte ki mdhur lage!"
+  },
+  {
+    "id": "0061",
+    "original": "সবুজ বনানী আমাদের অমূল্য সম্পদ।",
+    "romanized": "sbuj bnani amader omulj smpd"
+  },
+  {
+    "id": "0062",
+    "original": "জীবজন্তুর প্রতি আমাদের দয়ালু হওয়া উচিত।",
+    "romanized": "jibjntur prti amader dyalu hoya uchit"
+  },
+  {
+    "id": "0063",
+    "original": "শহরের জীবন অনেক ব্যস্ত আর কোলাহলপূর্ণ।",
+    "romanized": "shhrer jibn onek bjst ar kolahlpurn"
+  },
+  {
+    "id": "0064",
+    "original": "গ্রামের শান্ত পরিবেশ মনকে আনন্দ দেয়।",
+    "romanized": "gramer shant pribesh mnke annd dey"
+  },
+  {
+    "id": "0065",
+    "original": "মাটির চুলায় রান্না করা খাবারের স্বাদই আলাদা।",
+    "romanized": "matir chulay ranna kra khabarer sbadi alada"
+  },
+  {
+    "id": "0066",
+    "original": "বর্ষার বৃষ্টিতে ভিজে কাঁচলি খাওয়ার দিনগুলো মনে পড়ে।",
+    "romanized": "brshar brishtite bhije kanchli khaoyar dingulo mne pre"
+  },
+  {
+    "id": "0067",
+    "original": "রাতের বেলা বাগানে হাসনাহেনার গন্ধ ম ম করে।",
+    "romanized": "rater bela bagane hasnahenar gndh m m kre"
+  },
+  {
+    "id": "0068",
+    "original": "পুজোর ছুটিতে বাড়ি যাওয়ার আনন্দই আলাদা।",
+    "romanized": "pujor chhutite bari jaoyar anndi alada"
+  },
+  {
+    "id": "0069",
+    "original": "পহেলা বৈশাখে নববর্ষের উৎসব রঙিন হয়ে ওঠে।",
+    "romanized": "phela boishakhe nbbrsher utsb rngin hye othe"
+  },
+  {
+    "id": "0070",
+    "original": "বাঙালির বারো মাসে তেরো পার্বণ।",
+    "romanized": "bangalir baro mase tero parbn"
+  },
+  {
+    "id": "0071",
+    "original": "আপনি কি আমার সাথে একমত?",
+    "romanized": "apni ki amar sathe ekmt?"
+  },
+  {
+    "id": "0072",
+    "original": "এই খবরটি শুনে আমি খুব অবাক হলাম।",
+    "romanized": "ei khbrti shune ami khub obak hlam"
+  },
+  {
+    "id": "0073",
+    "original": "চুপ করে বসে না থেকে কাজ শুরু করো।",
+    "romanized": "chup kre bse na theke kaj shuru kro"
+  },
+  {
+    "id": "0074",
+    "original": "ধৈর্য ধরুন, ভালো ফল অবশ্যই পাবেন।",
+    "romanized": "dhoirj dhrun, bhalo phl obshji paben"
+  },
+  {
+    "id": "0075",
+    "original": "সে কি গতকাল এখানে এসেছিল?",
+    "romanized": "se ki gtkal ekhane esechhil?"
+  },
+  {
+    "id": "0076",
+    "original": "না, সে কালকে আসেনি।",
+    "romanized": "na, se kalke aseni"
+  },
+  {
+    "id": "0077",
+    "original": "আগামীকাল একটি জরুরি মিটিং আছে।",
+    "romanized": "agamikal ekti jruri miting achhe"
+  },
+  {
+    "id": "0078",
+    "original": "আমার ল্যাপটপটি হঠাৎ কাজ করা বন্ধ করে দিয়েছে।",
+    "romanized": "amar ljaptpti hthat kaj kra bndh kre diyechhe"
+  },
+  {
+    "id": "0079",
+    "original": "ফোনটি চার্জে দেওয়া দরকার।",
+    "romanized": "phonti charje deoya drkar"
+  },
+  {
+    "id": "0080",
+    "original": "একটু জল পাওয়া যাবে কি? আমি খুব তৃষ্ণার্ত।",
+    "romanized": "ektu jl paoya jabe ki? ami khub trishnart"
+  },
+  {
+    "id": "0081",
+    "original": "আজকের খাবারটা খুব ঝাল হয়েছে।",
+    "romanized": "ajker khabarta khub jhal hyechhe"
+  },
+  {
+    "id": "0082",
+    "original": "মিষ্টি দই খেতে আমার খুব ভালো লাগে।",
+    "romanized": "mishti di khete amar khub bhalo lage"
+  },
+  {
+    "id": "0083",
+    "original": "বাজারে ইলিশ মাছের দাম অনেক বেড়ে গেছে।",
+    "romanized": "bajare ilish machher dam onek bere gechhe"
+  },
+  {
+    "id": "0084",
+    "original": "ফলের রাজা আম, যা সবার প্রিয়।",
+    "romanized": "phler raja am, ja sbar priy"
+  },
+  {
+    "id": "0085",
+    "original": "রাতের বেলা পড়াশোনা করতে আমার সুবিধা হয়।",
+    "romanized": "rater bela prashona krte amar subidha hy"
+  },
+  {
+    "id": "0086",
+    "original": "ভোরে হাঁটলে মন এবং শরীর দুইই ভালো থাকে।",
+    "romanized": "bhore hantle mn ebng shrir dui bhalo thake"
+  },
+  {
+    "id": "0087",
+    "original": "লাইব্রেরিতে শান্তিতে বই পড়া যায়।",
+    "romanized": "laibrerite shantite bi pra jay"
+  },
+  {
+    "id": "0088",
+    "original": "টিফিনে বন্ধুদেশ সাথে আড্ডা দেওয়া খুব মজার।",
+    "romanized": "tiphine bndhudesh sathe adda deoya khub mjar"
+  },
+  {
+    "id": "0089",
+    "original": "শীতের সকালে রোদে বসে থাকার আরামই আলাদা।",
+    "romanized": "shiter skale rode bse thakar arami alada"
+  },
+  {
+    "id": "0090",
+    "original": "পড়ন্ত বিকেলে আকাশের রং লাল হয়ে যায়।",
+    "romanized": "prnt bikele akasher rng lal hye jay"
+  },
+  {
+    "id": "0091",
+    "original": "ঝড়ো হাওয়ায় গাছের পাতা নড়ছে।",
+    "romanized": "jhro haoyay gachher pata nrchhe"
+  },
+  {
+    "id": "0092",
+    "original": "অন্ধকার রাতে চাঁদের আলো পথ দেখায়।",
+    "romanized": "ondhkar rate chander alo pth dekhay"
+  },
+  {
+    "id": "0093",
+    "original": "মানুষের বিপদে এগিয়ে আসা আমাদের দায়িত্ব।",
+    "romanized": "manusher bipde egiye asa amader dayitb"
+  },
+  {
+    "id": "0094",
+    "original": "একতাই বল, এটাই আমাদের মূলমন্ত্র।",
+    "romanized": "ektai bl, etai amader mulmntr"
+  },
+  {
+    "id": "0095",
+    "original": "স্বাবলম্বী হওয়া জীবনের বড় সাফল্য।",
+    "romanized": "sbablmbi hoya jibner br saphlj"
+  },
+  {
+    "id": "0096",
+    "original": "মন দিয়ে কাজ করলে জয় নিশ্চিত।",
+    "romanized": "mn diye kaj krle jy nishchit"
+  },
+  {
+    "id": "0097",
+    "original": "কখনো হাল ছেড়ে দিও না।",
+    "romanized": "kkhno hal chhere dio na"
+  },
+  {
+    "id": "0098",
+    "original": "ভবিষ্যতের কথা ভেবে কাজ করা বুদ্ধিমানের লক্ষণ।",
+    "romanized": "bhbishjter ktha bhebe kaj kra buddhimaner lkshn"
+  },
+  {
+    "id": "0099",
+    "original": "মা-বাবার দোয়া জীবনের বড় সম্পদ।",
+    "romanized": "ma-babar doya jibner br smpd"
+  },
+  {
+    "id": "0100",
+    "original": "শান্তি আর ভালোবাসা দিয়ে পৃথিবী জয় করা সম্ভব।",
+    "romanized": "shanti ar bhalobasa diye prithibi jy kra smbhb"
+  },
+  {
+    "id": "0101",
+    "original": "বিজ্ঞান ও প্রযুক্তির উৎকর্ষ আমাদের জীবনধারা বদলে দিচ্ছে।",
+    "romanized": "bijnan o prjuktir utkrsh amader jibndhara bdle dichchhe"
+  },
+  {
+    "id": "0102",
+    "original": "সূক্ষ্ম বিচারবুদ্ধি সম্পন্ন মানুষের সংখ্যা ক্রমশ কমছে।",
+    "romanized": "sukshm bicharbuddhi smpnn manusher sngkhja krmsh kmchhe"
+  },
+  {
+    "id": "0103",
+    "original": "প্রাকৃতিক দুর্যোগ মোকাবিলায় আগাম প্রস্তুতির প্রয়োজন অনস্বীকার্য।",
+    "romanized": "prakritik durjog mokabilay agam prstutir pryojn onsbikarj"
+  },
+  {
+    "id": "0104",
+    "original": "সাহিত্যচর্চা মানুষের মনের সংকীর্ণতা দূর করতে সাহায্য করে।",
+    "romanized": "sahitjchrcha manusher mner sngkirnta dur krte sahajj kre"
+  },
+  {
+    "id": "0105",
+    "original": "অসামান্য পাণ্ডিত্য অর্জন করতে হলে প্রচুর অধ্যবসায়ের দরকার।",
+    "romanized": "osamanj panditj orjn krte hle prchur odhjbsayer drkar"
+  },
+  {
+    "id": "0106",
+    "original": "বিপর্যয়ের মুখেও যারা অবিচল থাকে তারাই প্রকৃত সাহসী।",
+    "romanized": "biprjyer mukheo jara obichl thake tarai prkrit sahsi"
+  },
+  {
+    "id": "0107",
+    "original": "ইতিহাসের পাতায় অনেক স্থাপত্যশৈলীর বর্ণনা পাওয়া যায়।",
+    "romanized": "itihaser patay onek sthaptjshoilir brnna paoya jay"
+  },
+  {
+    "id": "0108",
+    "original": "পরিবেশ দূষণ রোধে প্লাস্টিকের ব্যবহার বর্জন করা উচিত।",
+    "romanized": "pribesh dushn rodhe plastiker bjbhar brjn kra uchit"
+  },
+  {
+    "id": "0109",
+    "original": "সংস্কৃতির আদানপ্রদান বিভিন্ন জাতির মধ্যে মৈত্রী স্থাপন করে।",
+    "romanized": "sngskritir adanprdan bibhinn jatir mdhje moitri sthapn kre"
+  },
+  {
+    "id": "0110",
+    "original": "কৃত্রিম বুদ্ধিমত্তা ভবিষ্যতের শিল্প বিপ্লবের মূল কারিগর হবে।",
+    "romanized": "kritrim buddhimtta bhbishjter shilp biplber mul karigr hbe"
+  },
+  {
+    "id": "0111",
+    "original": "তীব্র দাবদাহে জনজীবন নাজেহাল হয়ে পড়েছে।",
+    "romanized": "tibr dabdahe jnjibn najehal hye prechhe"
+  },
+  {
+    "id": "0112",
+    "original": "ক্ষুদ্র ঋণের মাধ্যমে গ্রামীণ অর্থনীতির অভূতপূর্ব উন্নয়ন ঘটেছে।",
+    "romanized": "kshudr riner madhjme gramin orthnitir obhutpurb unnyn ghtechhe"
+  },
+  {
+    "id": "0113",
+    "original": "অনিবার্য কারণবশত আজকের অনুষ্ঠানটি স্থগিত ঘোষণা করা হলো।",
+    "romanized": "onibarj karnbsht ajker onushthanti sthgit ghoshna kra hlo"
+  },
+  {
+    "id": "0114",
+    "original": "কঠোর শৃঙ্খলাবদ্ধ জীবনই সাফল্যের চাবিকাঠি।",
+    "romanized": "kthor shringkhlabddh jibni saphljer chabikathi"
+  },
+  {
+    "id": "0115",
+    "original": "বাংলা ভাষার শব্দভাণ্ডার অত্যন্ত ঋদ্ধ এবং বৈচিত্র্যময়।",
+    "romanized": "bangla bhashar shbdbhandar otjnt riddh ebng boichitrjmy"
+  },
+  {
+    "id": "0116",
+    "original": "ক্ষুধার্ত শিশুকে এক মুঠো অন্ন দান করা পরম ধর্ম।",
+    "romanized": "kshudhart shishuke ek mutho onn dan kra prm dhrm"
+  },
+  {
+    "id": "0117",
+    "original": "নিষ্ঠুর সত্য অনেক সময় মেনে নেওয়া খুব কঠিন কাজ।",
+    "romanized": "nishthur stj onek smy mene neoya khub kthin kaj"
+  },
+  {
+    "id": "0118",
+    "original": "উচ্ছৃঙ্খল আচরণ সামাজিক শৃঙ্খলার পরিপন্থী।",
+    "romanized": "uchchhringkhl achrn samajik shringkhlar pripnthi"
+  },
+  {
+    "id": "0119",
+    "original": "জটিল সমীকরণ সমাধান করতে গভীর মনোযোগের প্রয়োজন।",
+    "romanized": "jtil smikrn smadhan krte gbhir mnojoger pryojn"
+  },
+  {
+    "id": "0120",
+    "original": "সূর্যাস্তের রক্তিম আভা আকাশকে এক অপরূপ সাজে সাজায়।",
+    "romanized": "surjaster rktim abha akashke ek oprup saje sajay"
+  },
+  {
+    "id": "0121",
+    "original": "সুস্থ সমাজ গঠনে নৈতিক শিক্ষার গুরুত্ব অপরিসীম।",
+    "romanized": "susth smaj gthne noitik shikshar gurutb oprisim"
+  },
+  {
+    "id": "0122",
+    "original": "অদম্য ইচ্ছা থাকলে যেকোনো বাধা অতিক্রম করা যায়।",
+    "romanized": "odmj ichchha thakle jekono badha otikrm kra jay"
+  },
+  {
+    "id": "0123",
+    "original": "বিস্ময়কর এই পৃথিবী রহস্যে ঘেরা।",
+    "romanized": "bismykr ei prithibi rhsje ghera"
+  },
+  {
+    "id": "0124",
+    "original": "অহংকার মানুষের পতন ডেকে আনে।",
+    "romanized": "ohngkar manusher ptn deke ane"
+  },
+  {
+    "id": "0125",
+    "original": "সততা ও নিষ্ঠার সাথে দায়িত্ব পালন করা উচিত।",
+    "romanized": "stta o nishthar sathe dayitb paln kra uchit"
+  },
+  {
+    "id": "0126",
+    "original": "প্রবল জলোচ্ছ্বাসে উপকূলীয় এলাকা প্লাবিত হয়েছে।",
+    "romanized": "prbl jlochchhbase upkuliy elaka plabit hyechhe"
+  },
+  {
+    "id": "0127",
+    "original": "বুদ্ধিমান মানুষ সময়ের সদ্ব্যবহার করে।",
+    "romanized": "buddhiman manush smyer sdbjbhar kre"
+  },
+  {
+    "id": "0128",
+    "original": "সৌন্দর্য কেবল বাহ্যিক নয়, তা মানুষের অন্তরেও থাকে।",
+    "romanized": "soundrj kebl bahjik ny, ta manusher ontreo thake"
+  },
+  {
+    "id": "0129",
+    "original": "বিখ্যাত মনিষীদের জীবনী থেকে অনেক কিছু শেখার আছে।",
+    "romanized": "bikhjat mnishider jibni theke onek kichhu shekhar achhe"
+  },
+  {
+    "id": "0130",
+    "original": "পরমতসহিষ্ণুতা গণতন্ত্রের অন্যতম প্রধান স্তম্ভ।",
+    "romanized": "prmtshishnuta gntntrer onjtm prdhan stmbh"
+  },
+  {
+    "id": "0131",
+    "original": "বিপ্লবী চেতনা অন্যায় ও অবিচারের বিরুদ্ধে লড়াই করতে শেখায়।",
+    "romanized": "biplbi chetna onjay o obicharer biruddhe lrai krte shekhay"
+  },
+  {
+    "id": "0132",
+    "original": "সমুদ্রের উত্তাল তরঙ্গে নৌকা চালানো বেশ বিপজ্জনক।",
+    "romanized": "smudrer uttal trngge nouka chalano besh bipjjnk"
+  },
+  {
+    "id": "0133",
+    "original": "বিশ্বায়ন সারা বিশ্বকে একটি বিশ্বগ্রামে পরিণত করেছে।",
+    "romanized": "bishbayn sara bishbke ekti bishbgrame print krechhe"
+  },
+  {
+    "id": "0134",
+    "original": "অন্ধবিশ্বাস সমাজকে অন্ধকারের দিকে ঠেলে দেয়।",
+    "romanized": "ondhbishbas smajke ondhkarer dike thele dey"
+  },
+  {
+    "id": "0135",
+    "original": "বিমর্ষ চিত্তে কোনো ভালো কাজ করা যায় না।",
+    "romanized": "bimrsh chitte kono bhalo kaj kra jay na"
+  },
+  {
+    "id": "0136",
+    "original": "প্রখর রৌদ্রে মাঠের ফাটল বৃষ্টির প্রতীক্ষায় থাকে।",
+    "romanized": "prkhr roudre mather phatl brishtir prtikshay thake"
+  },
+  {
+    "id": "0137",
+    "original": "ক্ষমা মহত্ত্বের লক্ষণ।",
+    "romanized": "kshma mhttber lkshn"
+  },
+  {
+    "id": "0138",
+    "original": "জীবনসংগ্রামে টিকে থাকতে হলে দক্ষতার প্রয়োজন।",
+    "romanized": "jibnsnggrame tike thakte hle dkshtar pryojn"
+  },
+  {
+    "id": "0139",
+    "original": "স্বার্থপরতা বন্ধুত্বের পথে বড় বাধা।",
+    "romanized": "sbarthprta bndhutber pthe br badha"
+  },
+  {
+    "id": "0140",
+    "original": "অন্ধকার রাতে প্রদীপের আলো পথ দেখায়।",
+    "romanized": "ondhkar rate prdiper alo pth dekhay"
+  },
+  {
+    "id": "0141",
+    "original": "জ্ঞান অর্জনের কোনো শেষ নেই।",
+    "romanized": "jnan orjner kono shesh nei"
+  },
+  {
+    "id": "0142",
+    "original": "মৌনতা অনেক সময় সম্মতির লক্ষণ বলে বিবেচিত হয়।",
+    "romanized": "mounta onek smy smmtir lkshn ble bibechit hy"
+  },
+  {
+    "id": "0143",
+    "original": "অপূর্ব এই ঝর্ণার সৌন্দর্য দেখে আমি মুগ্ধ।",
+    "romanized": "opurb ei jhrnar soundrj dekhe ami mugdh"
+  },
+  {
+    "id": "0144",
+    "original": "অসহায় মানুষের পাশে দাঁড়ানো আমাদের নৈতিক দায়িত্ব।",
+    "romanized": "oshay manusher pashe danrano amader noitik dayitb"
+  },
+  {
+    "id": "0145",
+    "original": "বিশ্রী স্বপ্ন দেখে আমি মাঝরাতে জেগে উঠলাম।",
+    "romanized": "bishri sbpn dekhe ami majhrate jege uthlam"
+  },
+  {
+    "id": "0146",
+    "original": "বৃষ্টির ঝিরঝির শব্দে ঘুমটা খুব ভালো হয়।",
+    "romanized": "brishtir jhirjhir shbde ghumta khub bhalo hy"
+  },
+  {
+    "id": "0147",
+    "original": "শহর জুড়ে রঙিন আলোর ঝলকানি দেখা যাচ্ছে।",
+    "romanized": "shhr jure rngin alor jhlkani dekha jachchhe"
+  },
+  {
+    "id": "0148",
+    "original": "মানুষের চরিত্র তার কর্মের মাধ্যমে ফুটে ওঠে।",
+    "romanized": "manusher chritr tar krmer madhjme phute othe"
+  },
+  {
+    "id": "0149",
+    "original": "অতিরিক্ত দুশ্চিন্তা স্বাস্থ্যের ক্ষতি করে।",
+    "romanized": "otirikt dushchinta sbasthjer kshti kre"
+  },
+  {
+    "id": "0150",
+    "original": "বই মানুষের নিত্যদিনের সঙ্গী এবং শ্রেষ্ঠ উপহার।",
+    "romanized": "bi manusher nitjdiner snggi ebng shreshth uphar"
+  },
+  {
+    "id": "0151",
+    "original": "অধৈর্য হওয়া মানেই পরাজয়ের পথে পা বাড়ানো।",
+    "romanized": "odhoirj hoya manei prajyer pthe pa barano"
+  },
+  {
+    "id": "0152",
+    "original": "প্রত্যন্ত অঞ্চলে স্বাস্থ্যসেবা পৌঁছে দেওয়া সরকারের লক্ষ্য।",
+    "romanized": "prtjnt onchle sbasthjseba pounchhe deoya srkarer lkshj"
+  },
+  {
+    "id": "0153",
+    "original": "আকস্মিক বন্যায় ফসলের ব্যপক ক্ষয়ক্ষতি হয়েছে।",
+    "romanized": "aksmik bnjay phsler bjpk kshykshti hyechhe"
+  },
+  {
+    "id": "0154",
+    "original": "ঐতিহাসিক নির্দশনগুলো আমাদের গৌরবময় অতীতের সাক্ষী।",
+    "romanized": "oitihasik nirdshngulo amader gourbmy otiter sakshi"
+  },
+  {
+    "id": "0155",
+    "original": "অশ্লীল ভাষা সুস্থ রুচির পরিচয় নয়।",
+    "romanized": "oshlil bhasha susth ruchir prichy ny"
+  },
+  {
+    "id": "0156",
+    "original": "অগণিত মানুষের আত্মত্যাগের বিনিময়ে আমরা স্বাধীনতা পেয়েছি।",
+    "romanized": "ognit manusher atmtjager binimye amra sbadhinta peyechhi"
+  },
+  {
+    "id": "0157",
+    "original": "সুষ্ঠু পরিকল্পনাই কাজের অর্ধেক সফলতা এনে দেয়।",
+    "romanized": "sushthu priklpnai kajer ordhek sphlta ene dey"
+  },
+  {
+    "id": "0158",
+    "original": "বৃক্ষরোপণ অভিযানের মাধ্যমে দেশ সবুজায়ন করা সম্ভব।",
+    "romanized": "brikshropn obhijaner madhjme desh sbujayn kra smbhb"
+  },
+  {
+    "id": "0159",
+    "original": "অস্থির মন নিয়ে সঠিক সিদ্ধান্ত নেওয়া যায় না।",
+    "romanized": "osthir mn niye sthik siddhant neoya jay na"
+  },
+  {
+    "id": "0160",
+    "original": "নিত্যপ্রয়োজনীয় জিনিসের দাম বাড়লে সাধারণ মানুষের কষ্ট হয়।",
+    "romanized": "nitjpryojnij jiniser dam barle sadharn manusher ksht hy"
+  },
+  {
+    "id": "0161",
+    "original": "শিক্ষাই জাতির ভবিষ্যৎ উন্নয়নের মূল চাবিকাঠি।",
+    "romanized": "shikshai jatir bhbishjt unnyner mul chabikathi"
+  },
+  {
+    "id": "0162",
+    "original": "সৎ কর্মের ফল সর্বদা মিষ্টি হয়।",
+    "romanized": "st krmer phl srbda mishti hy"
+  },
+  {
+    "id": "0163",
+    "original": "অজ গাঁয়ে থেকেও সে দেশখ্যাত প্রতিভা অর্জন করেছে।",
+    "romanized": "oj ganye thekeo se deshkhjat prtibha orjn krechhe"
+  },
+  {
+    "id": "0164",
+    "original": "তীব্র প্রতিযোগিতার বাজারে টিকে থাকা বেশ চ্যালেঞ্জিং।",
+    "romanized": "tibr prtijogitar bajare tike thaka besh chjalenjing"
+  },
+  {
+    "id": "0165",
+    "original": "অপ্রত্যাশিত সাফল্যে সে আত্মহারা হয়ে পড়েছে।",
+    "romanized": "oprtjashit saphlje se atmhara hye prechhe"
+  },
+  {
+    "id": "0166",
+    "original": "বিপর্যয়ের সময়ে ধৈর্য ধরাই শ্রেষ্ঠ গুণ।",
+    "romanized": "biprjyer smye dhoirj dhrai shreshth gun"
+  },
+  {
+    "id": "0167",
+    "original": "অজস্র তারার মেলায় আকাশটা আজ খুব সুন্দর।",
+    "romanized": "ojsr tarar melay akashta aj khub sundr"
+  },
+  {
+    "id": "0168",
+    "original": "শান্তিপূর্ণ সমাধানই দীর্ঘমেয়াদী উন্নতির পথ প্রশস্ত করে।",
+    "romanized": "shantipurn smadhani dirghmeyadi unntir pth prshst kre"
+  },
+  {
+    "id": "0169",
+    "original": "অকাল বর্ষণে কৃষকের মুখে চিন্তার ভাঁজ পড়েছে।",
+    "romanized": "okal brshne krishker mukhe chintar bhanj prechhe"
+  },
+  {
+    "id": "0170",
+    "original": "উচ্চাভিলাষী হতে গিয়ে নিজের শিকড়কে ভুলে যেও না।",
+    "romanized": "uchchabhilashi hte giye nijer shikrke bhule jeo na"
+  },
+  {
+    "id": "0171",
+    "original": "বিনীত আচরণ সবার মন জয় করে নেয়।",
+    "romanized": "binit achrn sbar mn jy kre ney"
+  },
+  {
+    "id": "0172",
+    "original": "অন্যায়কারীর শাস্তি হওয়া ন্যায়বিচারের দৃষ্টান্ত।",
+    "romanized": "onjaykarir shasti hoya njaybicharer drishtant"
+  },
+  {
+    "id": "0173",
+    "original": "বিচিত্র এই ধরণীর পরতে পরতে বিস্ময় রয়েছ।",
+    "romanized": "bichitr ei dhrnir prte prte bismy ryechh"
+  },
+  {
+    "id": "0174",
+    "original": "শৃঙ্খলিত জীবন দীর্ঘস্থায়ী সাফল্যের ভিত্তি স্থাপন করে।",
+    "romanized": "shringkhlit jibn dirghsthayi saphljer bhitti sthapn kre"
+  },
+  {
+    "id": "0175",
+    "original": "অসীম আকাশে সাদা মেঘের ভেলা ভেসে বেড়াছে।",
+    "romanized": "osim akashe sada megher bhela bhese berachhe"
+  },
+  {
+    "id": "0176",
+    "original": "বিখ্যাত মনিষীদের বাণী আমাদের অনুপ্রাণিত করে।",
+    "romanized": "bikhjat mnishider bani amader onupranit kre"
+  },
+  {
+    "id": "0177",
+    "original": "নিষ্ঠুর পৃথিবীর মায়াজালে আবদ্ধ আমরা সবাই।",
+    "romanized": "nishthur prithibir mayajale abddh amra sbai"
+  },
+  {
+    "id": "0178",
+    "original": "সততা শ্রেষ্ঠ সম্পদ, যা কেড়ে নেওয়া যায় না।",
+    "romanized": "stta shreshth smpd, ja kere neoya jay na"
+  },
+  {
+    "id": "0179",
+    "original": "অগ্নিমূর্তিতে কথা বললে সমস্যার সমাধান হয় না।",
+    "romanized": "ognimurtite ktha blle smsjar smadhan hy na"
+  },
+  {
+    "id": "0180",
+    "original": "সবুজ প্রকৃতি আমাদের ক্লান্তি দূর করে প্রশান্তি দেয়।",
+    "romanized": "sbuj prkriti amader klanti dur kre prshanti dey"
+  },
+  {
+    "id": "0181",
+    "original": "বিস্ময়কর প্রতিভার অধিকারী লোকটিকে আমি চিনি।",
+    "romanized": "bismykr prtibhar odhikari loktike ami chini"
+  },
+  {
+    "id": "0182",
+    "original": "অদম্য স্পৃহা মানুষকে লক্ষ্যস্থলে পৌঁছে দেয়।",
+    "romanized": "odmj spriha manushke lkshjsthle pounchhe dey"
+  },
+  {
+    "id": "0183",
+    "original": "বিশুষ্ক প্রান্তরে বৃষ্টির জল নতুন প্রাণের সঞ্চার করে।",
+    "romanized": "bishushk prantre brishtir jl ntun praner snchar kre"
+  },
+  {
+    "id": "0184",
+    "original": "অত্যাচারী শাসকের পতন অনিবার্য।",
+    "romanized": "otjachari shasker ptn onibarj"
+  },
+  {
+    "id": "0185",
+    "original": "সুষ্ঠু সমাজ গড়তে নৈতিক মূল্যবোধের প্রয়োজন খুব বেশি।",
+    "romanized": "sushthu smaj grte noitik muljbodher pryojn khub beshi"
+  },
+  {
+    "id": "0186",
+    "original": "অহংকারী হওয়া বুদ্ধিমানের পরিচয় নয়।",
+    "romanized": "ohngkari hoya buddhimaner prichy ny"
+  },
+  {
+    "id": "0187",
+    "original": "প্রবল ইচ্ছাশক্তি থাকলে পাহাড়কে জয় করা সম্ভব।",
+    "romanized": "prbl ichchhashkti thakle paharke jy kra smbhb"
+  },
+  {
+    "id": "0188",
+    "original": "অবিচল লক্ষ্য সাফল্যের অর্ধেক নিশ্চয়তা প্রদান করে।",
+    "romanized": "obichl lkshj saphljer ordhek nishchyta prdan kre"
+  },
+  {
+    "id": "0189",
+    "original": "বিমর্ষ দিনের শেষে এক ফালি হাসি অনেক দামী।",
+    "romanized": "bimrsh diner sheshe ek phali hasi onek dami"
+  },
+  {
+    "id": "0190",
+    "original": "অসম্ভবকে সম্ভব করাই মানুষের বিশেষত্ব।",
+    "romanized": "osmbhbke smbhb krai manusher bisheshtb"
+  },
+  {
+    "id": "0191",
+    "original": "সূক্ষ্ম কাজ করতে গেলে নিখুঁত মনোযোগ লাগে।",
+    "romanized": "sukshm kaj krte gele nikhunt mnojog lage"
+  },
+  {
+    "id": "0192",
+    "original": "পরিচ্ছন্ন পরিবেশ সুস্থ থাকার প্রথম শর্ত।",
+    "romanized": "prichchhnn pribesh susth thakar prthm shrt"
+  },
+  {
+    "id": "0193",
+    "original": "বিপরীত পরিস্থিতিতেও শান্ত থাকা একটি বিরল গুণ।",
+    "romanized": "biprit pristhititeo shant thaka ekti birl gun"
+  },
+  {
+    "id": "0194",
+    "original": "অকাট্য প্রমাণ ছাড়া কাউকে দোষী সাব্যস্ত করা জায়েজ নয়।",
+    "romanized": "okatj prman chhara kauke doshi sabjst kra jayej ny"
+  },
+  {
+    "id": "0195",
+    "original": "বিখ্যাত এই মন্দিরের স্থাপত্য মন কেড়ে নেয়।",
+    "romanized": "bikhjat ei mndirer sthaptj mn kere ney"
+  },
+  {
+    "id": "0196",
+    "original": "সূর্যালোক ভিটামিন ডি-এর একটি ভালো উৎস।",
+    "romanized": "surjalok bhitamin di-er ekti bhalo uts"
+  },
+  {
+    "id": "0197",
+    "original": "অসৎ সঙ্গে থেকে নিজের জীবন নষ্ট করো না।",
+    "romanized": "ost sngge theke nijer jibn nsht kro na"
+  },
+  {
+    "id": "0198",
+    "original": "বিজ্ঞান ও প্রযুক্তির লড়াইয়ে মেধাাই বড় হাতিয়ার।",
+    "romanized": "bijnan o prjuktir lraiye medhai br hatiyar"
+  },
+  {
+    "id": "0199",
+    "original": "অকৃত্রিম ভালোবাসা পৃথিবীকে বদলে দিতে পারে।",
+    "romanized": "okritrim bhalobasa prithibike bdle dite pare"
+  },
+  {
+    "id": "0200",
+    "original": "বিপ্লবী মন কোনো অন্যায় মেনে নিতে পারে না।",
+    "romanized": "biplbi mn kono onjay mene nite pare na"
+  }
+]
